@@ -1,0 +1,146 @@
+{
+    "educations": [
+        {
+            "school": "Universitas Pelita Harapan",
+            "schoolImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhlRZvQFXFPfSVYv-j8jldQJQgsWGfkM28tQ&s",
+            "major": "Information Systems",
+            "degree": "Bachelor's Degree",
+            "startDate": "2021",
+            "endDate": "2025"
+        },
+        {
+            "school": "SMA Sutomo 1",
+            "schoolImg": "https://media.licdn.com/dms/image/v2/C510BAQGpn-YUm6N3lg/company-logo_200_200/company-logo_200_200/0/1631396909984/sma_sutomo_1_medan_logo?e=1776297600&v=beta&t=Sc85s98jyoApBZ64PuHO6b1GKsROAYjvxc_DTVgQNds",
+            "major": "Mathematics and Natural Science",
+            "degree": "High School Diploma",
+            "startDate": "2018",
+            "endDate": "2021"
+        }
+    ],
+    "experiences": [
+        {
+            "title": "Back End Developer Intern",
+            "place": "Remote",
+            "type": "Internship",
+            "company": "Braincore",
+            "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
+            "companyLink": "https://braincore.id/",
+            "startDate": "AUG 2023",
+            "endDate": "OCT 2024",
+            "skills": ["Bun", "Flask", "RESTful API"],
+            "description": "<ul><li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li></ul>"
+        },
+        {
+            "title": "tes1 ps: jgn lupa hapus ini",
+            "place": "Remote",
+            "type": "Internship",
+            "company": "Braincore",
+            "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
+            "companyLink": "https://braincore.id/",
+            "startDate": "AUG 2023",
+            "endDate": "PRESENT",
+            "skills": ["Bun", "Flask", "RESTful API"],
+            "description": "<ul><li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li></ul>"
+        },
+        {
+            "title": "tes2 tertua ps: jgn lupa hapus ini",
+            "place": "Remote",
+            "type": "Internship",
+            "company": "Braincore",
+            "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
+            "companyLink": "https://braincore.id/",
+            "startDate": "AUG 2023",
+            "endDate": "Nope",
+            "skills": ["Bun", "Flask", "RESTful API", "MySQL"],
+            "description": "<ul><li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li></ul>"
+        }
+    ],
+    "activities": [
+        {
+            "title": "Cloud Computing Distinction Graduate &ndash; Bangkit 2024 Batch 1",
+            "type": "Studi Independen MSIB &ndash; Kampus Merdeka program",
+            "organization": "Bangkit led by Google, Goto, and Traveloka",
+            "organizationImg": "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=1776902400&v=beta&t=q_610_oZCNQCh01H3ghP9qGx9mFu1OR-LnmnOlRfLL8",
+            "organizationLink": "https://www.linkedin.com/company/bangkit-academy/posts/?feedView=all",
+            "organizationDesc": "Bangkit is a unique career readiness program led by Google and delivered with support from industry experts from industry partners like GoTo and Traveloka. The program is designed to provide the participants with first-hand exposure to real-world practitioners and prepare them with relevant skills for a successful career in leading tech companies.",
+            "description": "<ul><li>Selected as one of 4,650 students from 57k+ applicants all over Indonesia.</li><li>Accepted as one of the two selected teams in the Company Capstone Track (Braincore) from the total of 59 teams.</li><li>Best Team at Bangkit Company Track Capstone Project with Braincore.</li><li>Graduated as the top 10% of Best Graduates with Distinction in Cloud Computing Learning Path.</li><li>Top 50 Best Showcase team Winners of Bangkit Challenge 2: Project Management Challenge.</li><li>Learned Cloud Computing based on Google Cloud using Google Cloud Platform (GCP).</li></ul>",
+            "skills": ["Backend", "Node.js (Javascript)", "MySQL", "RESTful API", "Google Cloud"],
+            "startDate": "FEB 2024",
+            "endDate": "JUL 2024"
+        },
+        {
+            "title": "Mobile Development (Android) Graduate &ndash; Bangkit 2023 Batch 2",
+            "type": "Studi Independen MSIB &ndash; Kampus Merdeka program",
+            "organization": "Bangkit led by Google, Goto, and Traveloka",
+            "organizationImg": "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=1776902400&v=beta&t=q_610_oZCNQCh01H3ghP9qGx9mFu1OR-LnmnOlRfLL8",
+            "organizationLink": "https://www.linkedin.com/company/bangkit-academy/posts/?feedView=all",
+            "organizationDesc": "Bangkit is a unique career readiness program led by Google and delivered with support from industry experts from industry partners like GoTo and Traveloka. The program is designed to provide the participants with first-hand exposure to real-world practitioners and prepare them with relevant skills for a successful career in leading tech companies.",
+            "description": "<ul><li>Selected as one of 4,520 students from 47k+ applicants all over Indonesia.</li><li>Graduated as Full Graduate in Mobile Development (Android) Learning Path.</li><li>Learned Mobile Development using Native Android and Jetpack Compose.</li></ul>",
+            "skills": ["Android", "Kotlin", "Android Studio", "SQLite"],
+            "startDate": "AUG 2023",
+            "endDate": "JAN 2024"
+        },
+        {
+            "title": "Mentor of Information Systems Study Program",
+            "type": "Contract",
+            "organization": "Mentoring Universitas Pelita Harapan",
+            "organizationImg": "https://media.licdn.com/dms/image/v2/C510BAQERyWIsSDw_mw/company-logo_200_200/company-logo_200_200/0/1630597855572?e=1776902400&v=beta&t=fl0umYCPzdtX42_e_6dE2KSQo19GPu3PbZLeDhO-NYI",
+            "organizationLink": "https://www.linkedin.com/company/mentoring-universitas-pelita-harapan/posts/?feedView=all",
+            "organizationDesc": "Mentoring Universitas Pelita Harapan is a Student Service Unit (ULM &ndash; Unit Layanan Mahasiswa) that provides guidance, support, and mentorship to new students as they transition into their academic journey at Universitas Pelita Harapan.",
+            "description": "<ul><li>Mentored a group of new students intake 2022 from Information Systems.</li><li>Guided and informed mentees regarding important matters in university, such as announcements, rules, and regulations.</li><li>Encouraged mentees to be proactive in exploring events, competitions, and programs offered by the university.</li></ul>",
+            "skills": ["Servant Leadership"],
+            "startDate": "AUG 2022",
+            "endDate": "AUG 2023"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Learnin P3K",
+            "path": "learnin-p3k",
+            "projectLogo": "",
+            "projectImg": [""],
+            "projectDemo": "https://youtu.be/LT-AaMg3knc",
+            "techStacks": ["Android (Kotlin)", "Node.js (Javascript)", "MySQL", "GCP"],
+            "myRole": "Full Stack Developer (Mobile and Backend)",
+            "description": "Learnin P3K is an Android-based mobile application created to enhance First Aid (P3K) literacy. This application integrates structured educational content with gamification and quizzes to boost users' motivation and understanding on first aid. This project was developed as a final requirement for a Bachelor's degree at Universitas Pelita Harapan.",
+            "startDate": "APR 2025",
+            "endDate": "JAN 2025"
+        },
+        {
+            "title": "BrainStore",
+            "path": "brainstore",
+            "projectLogo": "",
+            "projectImg": [""],
+            "projectDemo": "https://youtu.be/4WufB9SrW6U",
+            "techStacks": ["Node.js (Javascript)", "MySQL", "Sequelize", "GCP"],
+            "myRole": "Backend Developer",
+            "description": "BrainStore is a multiplatform application available on Android and Web, created to resolve customer frustrations regarding low-quality product imagery. The core of the application features a Machine Learning model that automatically detects and flags image quality issues, such as blur ot bokeh, ensuring a high-standard visual experience for users. This empowers sellers to improve their product presentation and boost sales. Recognizing the potential for Machine Learning errors, BrainStore allows admininstrators to review detection and provide corrective feedback through an administrative dashboard for monitoring model performance. These errors will be used for continuous model improvement. BrainStore was developed as a company-based capstone project in collaboration with Braincore during Bangkit Academy 2024 Batch 1. The project was executed by a cross-functional team of 6 members, specializing in Machine Learning, Cloud Computing, and Mobile Development.",
+            "startDate": "MAY 2024",
+            "endDate": "JUN 2024"
+        },
+        {
+            "title": "Pusatara",
+            "path": "pusatara",
+            "projectLogo": "",
+            "projectImg": [""],
+            "projectDemo": null,
+            "techStacks": ["Android (Kotlin)", "NoSQL", "Android Studio"],
+            "myRole": "Mobile (Android) Developer",
+            "description": "Pusatara is an Android-based mobile application created to address  the significant issue of inadequate awareness and appreciation of traditional Indonesian fabrics like Batik and Songket. The core of the application features a Machine Learning to identify and provide information of the fabric, aiming to preserve and promote Indonesia's rich textile heritage. Pustara was developed as a product-based capstone project in Bangkit Academy 2023 Batch 2. The project was executed by a cross-functional team of 7 members, specializing in Mobile Development, Machine Learning, and UI/UX Design.",
+            "startDate": "DEC 2023",
+            "endDate": "DEC 2023"
+        },
+        {
+            "title": "O-KI (Only K-POP Information)",
+            "path": "o-ki",
+            "projectLogo": "",
+            "projectImg": [""],
+            "projectDemo": null,
+            "techStacks": ["PHP", "Javascript", "MySQL"],
+            "myRole": "Full Stack Developer",
+            "description": "O-KI is a web-based application created for K-popers to easily access various information about their favorite K-pop celebrities. The core of the application features articles and news about K-pop celebrities, also an e-commerce feature to buy album and concert tickets. O-KI was developed as a final project for Perancangan & Pemrograman WEB I course at Universitas Pelita Harapan. This project was collaborated with 4 team members.",
+            "startDate": "APR 2023",
+            "endDate": "MAY 2023"
+        }
+    ]
+}

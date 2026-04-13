@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <title class="title-detail"></title>
+
+    <!-- Lato Font (Body) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+    <!-- Fairplay Display Font (Headline) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="font-bold text-[20px] tracking-wider hover:underline hover:underline-offset-4" style="font-family: var(--font-playfair); color: var(--color-primary);"><a href="index.html#">Carissa Chandra</a></h1>
+
+        <nav>
+            <label for="menu-toggle" class="block cursor-pointer md:hidden">
+                <!-- TODO: ganti icon hamburger asli -->
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </label>
+
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md p-10 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#activity">Activity</a></li>
+                <li><a href="index.html#project">Project</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="px-6 pb-20 md:px-20">
+        <ul class="flex flex-row gap-2 items-center justify-start mt-[8px]">
+            <li class="hover:font-bold"><a href="index.html">Home</a></li>
+            <li>/</li>
+            <li class="hover:font-bold"><a href="index.html#project">Project</a></li>
+            <li>/</li>
+            <li><b><a href="#" class="title-detail"></a></b></li>
+        </ul>
+
+        <h1 class="title-detail mt-[40px]" style="font-size: 28px; font-weight: bold;"></h1>
+
+        <img id="project-logo" class="rounded-[8px] w-full h-[160px] md:h-[400px] object-cover mt-[20px]">
+
+        <div class="flex flex-row items-center justify-between mt-[20px]">
+            <table>
+                <tr>
+                    <td class="px-4 py-2 rounded-l-[8px]" style="background-color: var(--color-primary); color: var(--color-on-primary); outline: 2px solid var(--color-primary); font-weight: bold;">Role</td>
+                    <td id="my-role" class="px-4 py-2 rounded-r-[8px]" style="background-color: var(--container-bg-color); outline: 2px solid var(--color-primary)"></td>
+                </tr>
+            </table>
+
+            <div id="project-duration" class="px-4 py-2 rounded-[8px]" style="background-color: var(--color-primary); color: var(--color-on-primary);"></div>
+        </div>
+
+        <!-- ini carousel utk nunjukkin keseluruhan foto project -->
+        <!-- TODO: isi foto-foto project -->
+        <div class="carousel w-full min-h-[500px] mt-[20px]">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img
+                src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img
+                src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <img
+                src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <img
+                src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                </div>
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#slide1" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">1</a>
+            <a href="#slide2" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">2</a>
+            <a href="#slide3" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">3</a>
+            <a href="#slide4" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">4</a>
+        </div>
+    </main>
+</body>
+</html>
