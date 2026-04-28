@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script defer src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -69,44 +70,24 @@
             <div id="project-duration" class="px-4 py-2 rounded-[8px]" style="background-color: var(--color-primary); color: var(--color-on-primary);"></div>
         </div>
 
-        <!-- ini carousel utk nunjukkin keseluruhan foto project -->
-        <!-- TODO: isi foto-foto project -->
-        <div class="carousel w-full min-h-[500px] mt-[20px]">
-            <div id="slide1" class="carousel-item relative w-full">
-                <img
-                src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-                class="w-full" />
-                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                </div>
-            </div>
-            <div id="slide2" class="carousel-item relative w-full">
-                <img
-                src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-                class="w-full" />
-                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                </div>
-            </div>
-            <div id="slide3" class="carousel-item relative w-full">
-                <img
-                src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-                class="w-full" />
-                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                </div>
-            </div>
-            <div id="slide4" class="carousel-item relative w-full">
-                <img
-                src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-                class="w-full" />
-                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                </div>
-            </div>
+        <p id="project-desc" class="mt-[40px] text-justify">tes</p>
+
+        <!-- TODO: Taruh section title -->
+        <div id="project-img" class="flex flex-col items-center mt-[16px]">
+            <div id="carousel-img" class="carousel max-w-[1000px] max-h-[500px] mt-[20px]"></div>
+            <div id="carousel-nav" class="flex w-full justify-center gap-2 py-2"></div>
         </div>
-        <div class="flex w-full justify-center gap-2 py-2">
-            <a href="#slide1" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">1</a>
-            <a href="#slide2" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">2</a>
-            <a href="#slide3" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">3</a>
-            <a href="#slide4" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary)">4</a>
-        </div>
+
+        <!-- TOOD: Taruh section title -->
+        <div id="project-demo" class="w-full max-w-[800px] aspect-video mx-auto mt-[40px]"></div>
     </main>
+
+    <footer>
+        <!-- TODO: Bikin kayak kartu nama, jadi lbh ada kesan di footer -->
+        <p>&copy; <span id="year"></span> Carissa Chandra. All rights are reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -28,7 +28,7 @@
             "startDate": "AUG 2023",
             "endDate": "OCT 2024",
             "skills": ["Bun", "Flask", "RESTful API"],
-            "description": "<ul><li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li></ul>"
+            "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
         },
         {
             "title": "tes1 ps: jgn lupa hapus ini",
@@ -40,7 +40,7 @@
             "startDate": "AUG 2023",
             "endDate": "PRESENT",
             "skills": ["Bun", "Flask", "RESTful API"],
-            "description": "<ul><li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li></ul>"
+            "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
         },
         {
             "title": "tes2 tertua ps: jgn lupa hapus ini",
@@ -52,7 +52,7 @@
             "startDate": "AUG 2023",
             "endDate": "Nope",
             "skills": ["Bun", "Flask", "RESTful API", "MySQL"],
-            "description": "<ul><li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li></ul>"
+            "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
         }
     ],
     "activities": [
@@ -63,7 +63,7 @@
             "organizationImg": "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=1776902400&v=beta&t=q_610_oZCNQCh01H3ghP9qGx9mFu1OR-LnmnOlRfLL8",
             "organizationLink": "https://www.linkedin.com/company/bangkit-academy/posts/?feedView=all",
             "organizationDesc": "Bangkit is a unique career readiness program led by Google and delivered with support from industry experts from industry partners like GoTo and Traveloka. The program is designed to provide the participants with first-hand exposure to real-world practitioners and prepare them with relevant skills for a successful career in leading tech companies.",
-            "description": "<ul><li>Selected as one of 4,650 students from 57k+ applicants all over Indonesia.</li><li>Accepted as one of the two selected teams in the Company Capstone Track (Braincore) from the total of 59 teams.</li><li>Best Team at Bangkit Company Track Capstone Project with Braincore.</li><li>Graduated as the top 10% of Best Graduates with Distinction in Cloud Computing Learning Path.</li><li>Top 50 Best Showcase team Winners of Bangkit Challenge 2: Project Management Challenge.</li><li>Learned Cloud Computing based on Google Cloud using Google Cloud Platform (GCP).</li></ul>",
+            "description": "<li>Selected as one of 4,650 students from 57k+ applicants all over Indonesia.</li><li>Accepted as one of the two selected teams in the Company Capstone Track (Braincore) from the total of 59 teams.</li><li>Best Team at Bangkit Company Track Capstone Project with Braincore.</li><li>Graduated as the top 10% of Best Graduates with Distinction in Cloud Computing Learning Path.</li><li>Top 50 Best Showcase team Winners of Bangkit Challenge 2: Project Management Challenge.</li><li>Learned Cloud Computing based on Google Cloud using Google Cloud Platform (GCP).</li>",
             "skills": ["Backend", "Node.js (Javascript)", "MySQL", "RESTful API", "Google Cloud"],
             "startDate": "FEB 2024",
             "endDate": "JUL 2024"
@@ -75,7 +75,7 @@
             "organizationImg": "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=1776902400&v=beta&t=q_610_oZCNQCh01H3ghP9qGx9mFu1OR-LnmnOlRfLL8",
             "organizationLink": "https://www.linkedin.com/company/bangkit-academy/posts/?feedView=all",
             "organizationDesc": "Bangkit is a unique career readiness program led by Google and delivered with support from industry experts from industry partners like GoTo and Traveloka. The program is designed to provide the participants with first-hand exposure to real-world practitioners and prepare them with relevant skills for a successful career in leading tech companies.",
-            "description": "<ul><li>Selected as one of 4,520 students from 47k+ applicants all over Indonesia.</li><li>Graduated as Full Graduate in Mobile Development (Android) Learning Path.</li><li>Learned Mobile Development using Native Android and Jetpack Compose.</li></ul>",
+            "description": "<li>Selected as one of 4,520 students from 47k+ applicants all over Indonesia.</li><li>Graduated as Full Graduate in Mobile Development (Android) Learning Path.</li><li>Learned Mobile Development using Native Android and Jetpack Compose.</li>",
             "skills": ["Android", "Kotlin", "Android Studio", "SQLite"],
             "startDate": "AUG 2023",
             "endDate": "JAN 2024"
@@ -87,7 +87,7 @@
             "organizationImg": "https://media.licdn.com/dms/image/v2/C510BAQERyWIsSDw_mw/company-logo_200_200/company-logo_200_200/0/1630597855572?e=1776902400&v=beta&t=fl0umYCPzdtX42_e_6dE2KSQo19GPu3PbZLeDhO-NYI",
             "organizationLink": "https://www.linkedin.com/company/mentoring-universitas-pelita-harapan/posts/?feedView=all",
             "organizationDesc": "Mentoring Universitas Pelita Harapan is a Student Service Unit (ULM &ndash; Unit Layanan Mahasiswa) that provides guidance, support, and mentorship to new students as they transition into their academic journey at Universitas Pelita Harapan.",
-            "description": "<ul><li>Mentored a group of new students intake 2022 from Information Systems.</li><li>Guided and informed mentees regarding important matters in university, such as announcements, rules, and regulations.</li><li>Encouraged mentees to be proactive in exploring events, competitions, and programs offered by the university.</li></ul>",
+            "description": "<li>Mentored a group of new students intake 2022 from Information Systems.</li><li>Guided and informed mentees regarding important matters in university, such as announcements, rules, and regulations.</li><li>Encouraged mentees to be proactive in exploring events, competitions, and programs offered by the university.</li>",
             "skills": ["Servant Leadership"],
             "startDate": "AUG 2022",
             "endDate": "AUG 2023"
@@ -97,48 +97,48 @@
         {
             "title": "Learnin P3K",
             "path": "learnin-p3k",
-            "projectLogo": "",
-            "projectImg": [""],
-            "projectDemo": "https://youtu.be/LT-AaMg3knc",
+            "projectLogo": "asset/logo_project/logo-learninp3k.png",
+            "projectImg": ["learninp3k/projectimg-learninp3k-1.png", "learninp3k/projectimg-learninp3k-2.png", "learninp3k/projectimg-learninp3k-3.png", "learninp3k/projectimg-learninp3k-4.png", "learninp3k/projectimg-learninp3k-5.png", "learninp3k/projectimg-learninp3k-6.png", "learninp3k/projectimg-learninp3k-7.png", "learninp3k/projectimg-learninp3k-8.png", "learninp3k/projectimg-learninp3k-9.png", "learninp3k/projectimg-learninp3k-10.png", "learninp3k/projectimg-learninp3k-11.png"],
+            "projectDemo": "LT-AaMg3knc",
             "techStacks": ["Android (Kotlin)", "Node.js (Javascript)", "MySQL", "GCP"],
             "myRole": "Full Stack Developer (Mobile and Backend)",
-            "description": "Learnin P3K is an Android-based mobile application created to enhance First Aid (P3K) literacy. This application integrates structured educational content with gamification and quizzes to boost users' motivation and understanding on first aid. This project was developed as a final requirement for a Bachelor's degree at Universitas Pelita Harapan.",
+            "description": "Learnin P3K is an Android mobile application designed to provide first aid (P3K) learning materials. This application allows users to learn and understand P3K and raise awareness of first aid safety. The materials are integrated to be structured educational content, filled with gamification and quizzes to boost users’ motivation in learning at Learnin P3K.<br><br>In this project, my role is Full Stack Developer, responsible for building a mobile application that serves as the frontend for user interaction and developing the backend to manage application and user data. The mobile application was built natively for the Android OS using the MVVM (Model - View - ViewModel) architecture. The backend was developed using Node.js with Express.js framework, leveraging Sequelize as the ORM with a MySQL database. To enable remote data access for users, I deployed the backend services to Google Cloud and utilized Google Cloud SQL for managing the database.<br><br>Learnin P3K was developed as a final project required to obtain a Bachelor’s degree at Universitas Pelita Harapan. The application was tested with User Acceptance Testing (UAT), showing that the application successfully met the user’s needs. Pre-test and post-test conducted with users demonstrated a significant <b>71.81% improvement</b> in first aid understanding. Additionally, users’ feedback was dominated by the gamification aspect, indicating that the application is effective in increasing learning motivation.",
             "startDate": "APR 2025",
             "endDate": "JAN 2025"
         },
         {
             "title": "BrainStore",
             "path": "brainstore",
-            "projectLogo": "",
-            "projectImg": [""],
-            "projectDemo": "https://youtu.be/4WufB9SrW6U",
+            "projectLogo": "asset/logo_project/logo-brainstore.png",
+            "projectImg": null,
+            "projectDemo": "4WufB9SrW6U",
             "techStacks": ["Node.js (Javascript)", "MySQL", "Sequelize", "GCP"],
             "myRole": "Backend Developer",
-            "description": "BrainStore is a multiplatform application available on Android and Web, created to resolve customer frustrations regarding low-quality product imagery. The core of the application features a Machine Learning model that automatically detects and flags image quality issues, such as blur ot bokeh, ensuring a high-standard visual experience for users. This empowers sellers to improve their product presentation and boost sales. Recognizing the potential for Machine Learning errors, BrainStore allows admininstrators to review detection and provide corrective feedback through an administrative dashboard for monitoring model performance. These errors will be used for continuous model improvement. BrainStore was developed as a company-based capstone project in collaboration with Braincore during Bangkit Academy 2024 Batch 1. The project was executed by a cross-functional team of 6 members, specializing in Machine Learning, Cloud Computing, and Mobile Development.",
+            "description": "BrainStore is an e-commerce multi-platform application available on Android and the Web, developed to address customer frustrations with low-quality product imagery. BrainStore is designed with three user roles: Admin, Seller, and Customer. The core of the application features a Machine Learning to detects and flags image quality issues like blur or bokeh, ensuring a high-standard visual experience for users. This empowers sellers to improve their product presentation and effectively boost sales. Recognizing the potential of the Machine Learning errors, BrainStore allows administrators to review detections and provide corrective feedback through a monitoring dashboard for the Machine Learning model. The error detections appear as appeals from sellers when their products are labeled as blur or bokeh, preventing them from being published to the application.<br><br>BrainStore was executed by a cross-functional team of 6 members, specializing in Machine Learning, Cloud Computing, and Mobile Development. My role focused on Cloud Computing, where I was responsible for backend development. The backend was developed using Node.js with Express.js framework, leveraging Sequelize as the ORM with a MySQL database. To enable remote data access for users, I deployed the backend services to Google Cloud, utilizing Google Cloud SQL for managing the database and Google Cloud Storage for file and image hosting.<br><br>BrainStore was developed as a compay-based capstone project in collaboration with Braincore during Bangkit Academy 2024 Batch 1. This project was honored with the <b>‘Best Team’ award</b> for excellence in collaboration and successful project delivery.",
             "startDate": "MAY 2024",
             "endDate": "JUN 2024"
         },
         {
             "title": "Pusatara",
             "path": "pusatara",
-            "projectLogo": "",
-            "projectImg": [""],
+            "projectLogo": "asset/logo_project/logo-pusatara.png",
+            "projectImg": ["pusatara/projectimg-pusatara-1.png", "pusatara/projectimg-pusatara-2.png", "pusatara/projectimg-pusatara-3.png", "pusatara/projectimg-pusatara-4.png"],
             "projectDemo": null,
             "techStacks": ["Android (Kotlin)", "NoSQL", "Android Studio"],
             "myRole": "Mobile (Android) Developer",
-            "description": "Pusatara is an Android-based mobile application created to address  the significant issue of inadequate awareness and appreciation of traditional Indonesian fabrics like Batik and Songket. The core of the application features a Machine Learning to identify and provide information of the fabric, aiming to preserve and promote Indonesia's rich textile heritage. Pustara was developed as a product-based capstone project in Bangkit Academy 2023 Batch 2. The project was executed by a cross-functional team of 7 members, specializing in Mobile Development, Machine Learning, and UI/UX Design.",
+            "description": "Pusatara is an Android mobile application designed to introduce traditional Indonesian fabrics into the digital era. This helps to address the significant issue of the awareness gap for Batik and Songket, making our rich cultural heritage accessible and engaging for the next generation. The core of the application features a Machine Learning to identify specific fabrics and provide users with detailed information about them, aiming to preserve and promote Indonesia’s rich textile heritage.<br><br>Pusatara was executed by a cross-functional team of 7 members, specializing in Machine Learning, Cloud Computing, and Mobile Development. My role focused on Mobile Development, where I was responsible for designing the application interface and building the mobile application. The mobile application was built natively for the Android OS using the MVVM (Model - View - ViewModel) architecture.<br><br>Pusatara was developed as a product-based capstone project in Bangkit Academy 2023 Batch 2.",
             "startDate": "DEC 2023",
             "endDate": "DEC 2023"
         },
         {
-            "title": "O-KI (Only K-POP Information)",
+            "title": "O-KI (Only K-POP Info)",
             "path": "o-ki",
-            "projectLogo": "",
-            "projectImg": [""],
+            "projectLogo": "asset/logo_project/logo-o-ki.png",
+            "projectImg": ["o-ki/projectimg-oki-1.png", "o-ki/projectimg-oki-2.png", "o-ki/projectimg-oki-3.png", "o-ki/projectimg-oki-4.png", "o-ki/projectimg-oki-5.png", "o-ki/projectimg-oki-6.png", "o-ki/projectimg-oki-7.png", "o-ki/projectimg-oki-8.png"],
             "projectDemo": null,
             "techStacks": ["PHP", "Javascript", "MySQL"],
             "myRole": "Full Stack Developer",
-            "description": "O-KI is a web-based application created for K-popers to easily access various information about their favorite K-pop celebrities. The core of the application features articles and news about K-pop celebrities, also an e-commerce feature to buy album and concert tickets. O-KI was developed as a final project for Perancangan & Pemrograman WEB I course at Universitas Pelita Harapan. This project was collaborated with 4 team members.",
+            "description": "O-KI (Only K-pop Info) is a web-based application created to provide K-pop fans with easy access to a variety information about their favorite artists, songs, concerts, and trends across the Korean industry entertainment. O-KI also includes a shop section for K-pop fans to browse and buy K-pop merchandises and official collectibles. O-KI is designed with two user roles: admin and customer.<br><br>This project was collaborated with 4 team members. My role focused on the Full Stack Development, responsible for both the frontend and backend. For the frontend, I utilized HTML5 with the Bootstrap framework for a responsive layout, along with CSS3 and JavaScript for interactivity. On the backend, I implemented PHP to handle server-side logic and data management, using phpMyAdmin to interact with the MySQL database.<br><br>O-KI was developed as a final project in the “Perancangan & Pengembangan Web I” class at Universitas Pelita Harapan.",
             "startDate": "APR 2023",
             "endDate": "MAY 2023"
         }

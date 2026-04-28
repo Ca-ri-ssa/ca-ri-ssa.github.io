@@ -13,6 +13,8 @@
     --color-on-error: white;
     --section-border-bottom: 6px dashed #c8e9ce;
     --line-height: 0.8;
+    --list-style-image: url("../asset/button-text-lightmode.svg");
+    --list-highlighted-image: url("../asset/button-text-onlight.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +31,8 @@
     --color-on-error: #93000a;
     --section-border-bottom: 6px dashed #202a22;
     --line-height: 0.8;
+    --list-style-image: url("../asset/button-text-darkmode.svg");
+    --list-highlighted-image: url("../asset/button-text-ondark.svg");
   }
 }
 
@@ -146,10 +150,14 @@ body {
 }
 
 .json-list ul {
-    list-style-type: disc;
+    list-style-image: var(--list-style-image);
     list-style-position: outside;
     margin-left: 20px;
     padding-left: 0;
+}
+
+.json-list ul.listHighlighted {
+    list-style-image: var(--list-highlighted-image);
 }
 
 .project-card:hover {

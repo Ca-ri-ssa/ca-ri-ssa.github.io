@@ -9,14 +9,15 @@ const work_experience = async () => {
         container.innerHTML = data.experiences.map((exp, index, array) => {
             const isCurrent = exp.endDate === "PRESENT";
             const isHighlightedStyle = isCurrent ? "background-color: var(--color-primary); color: var(--color-on-primary);" : "background-color: var(--container-bg-color)";
+            const isHighlightedListStyle = isCurrent ? "listHighlighted" : "";
             const isLast = index === array.length - 1;
 
-            // TODO: Ganti icon untuk timeline
             return `
                 <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative shrink-0">
-                        <img src="asset/android-logo.svg" width="20px" class="min-h-[20px]" style="z-index: 2;">
-                        <div class="rounded-xl flex grow" style="position: absolute; top: 28px; bottom: -56px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
+                        <img src="asset/flowerbutton-lightmode.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
+                        <img src="asset/flowerbutton-darkmode.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+                        <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
                         <div class="flex flex-row justify-between items-center">
@@ -32,7 +33,8 @@ const work_experience = async () => {
                             <img src="${exp.companyImg}" alt="${exp.company} logo" title="${exp.company}" class="rounded-[4px] w-[24px] bg-center bg-cover">
                             <a href="${exp.companyLink}" class="hover:underline hover:underline-offset-4">${exp.company}</a>
                         </div>
-                        <p class="mt-[16px]"><strong>Description:</strong> ${exp.description}</p>
+                        <p class="mt-[16px]"><strong>Description:</strong></p>
+                        <ul class="${isHighlightedListStyle}">${exp.description}</ul>
                         <div class="flex flex-row mt-[16px] flex-wrap gap-1">
                             ${exp.skills.map(skill => `
                                 <div class="py-[4px] px-[6px]" style="border-radius: 8px; border: 2px solid var(--color-primary); background-color: var(--container-bg-color); color: var(--color-primary); font-size: 12px;">${skill}</div>
@@ -58,14 +60,15 @@ const all_activity = async () => {
         container.innerHTML = data.activities.map((activity, index, array) => {
             const isCurrent = activity.endDate === "PRESENT";
             const isHighlightedStyle = isCurrent ? "background-color: var(--color-primary); color: var(--color-on-primary);" : "background-color: var(--container-bg-color)";
+            const isHighlightedListStyle = isCurrent ? "listHighlighted" : "";
             const isLast = index === array.length - 1;
 
-            // TODO: Ganti icon untuk timeline, isi (sisa deskripsi organisasi)
             return `
                 <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative">
-                        <img src="asset/android-logo.svg" width="20px" class="min-h-[20px]" style="z-index: 2;">
-                        <div class="rounded-xl flex grow" style="position: absolute; top: 28px; bottom: -56px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
+                        <img src="asset/button-lightmode.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
+                        <img src="asset/button-darkmode.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+                        <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
                         <div class="flex flex-row justify-between items-center">
@@ -77,7 +80,8 @@ const all_activity = async () => {
                             <img src="${activity.organizationImg}" alt="${activity.organization} logo" title="${activity.organization}" class="rounded-[4px] w-[24px] bg-center bg-cover">
                             <a href="${activity.organizationLink}" class="hover:underline hover:underline-offset-4">${activity.organization}</a>
                         </div>
-                        <p class="mt-[16px]"><strong>Description:</strong> ${activity.description}</p>
+                        <p class="mt-[16px]"><strong>Description:</strong></p>
+                        <ul class="${isHighlightedListStyle}">${activity.description}</ul>
                         <div class="flex flex-row mt-[16px] flex-wrap gap-1">
                             ${activity.skills.map(skill => `
                                 <div class="py-[4px] px-[6px]" style="border-radius: 8px; border: 2px solid var(--color-primary); background-color: var(--container-bg-color); color: var(--color-primary); font-size: 12px;">${skill}</div>
@@ -102,8 +106,7 @@ const all_project = async () => {
 
         container.innerHTML = data.projects.map(project => `
             <div class="project-card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary); cursor: pointer;" onclick="window.location.href='project-detail.html?title=${encodeURIComponent(project.path)}'">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="${project.title}" class="rounded-[8px]">
-                <!-- <img src="${project.projectImg}" alt="${project.title}" class="rounded-[8px]"> -->
+                <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[8px]">
                 <h2 class="mt-[16px]" style="font-size: 20px"><b>${project.title}</b></h2>
                 <p class="line-clamp-5 mt-[8px]">${project.description}</p>
             </div>
@@ -125,17 +128,63 @@ const project_details = async () => {
         const project = data.projects.find(p => p.path === projectTitle);
 
         if(project) {
+
             const title = document.querySelectorAll(".title-detail");
+
             title.forEach(el => {
                 el.innerText = project.title
             });
 
-            document.getElementById("project-logo").src = "https://images.unsplash.com/photo-1774287784592-33f86f48e7e2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+            document.getElementById("project-logo").src = project.projectLogo;
             document.getElementById("project-logo").alt = `${project.title} logo`;
             document.getElementById("project-logo").title = project.title;
+            console.log("Project title:", project.title);
 
             document.getElementById("my-role").innerText = `${project.myRole}`;
             document.getElementById("project-duration").innerHTML = `${project.startDate} &#x2013; ${project.endDate}`;
+
+            document.getElementById("project-desc").innerHTML = project.description;
+
+            const carouselImg = document.getElementById("carousel-img");
+            const carouselNav = document.getElementById("carousel-nav");
+
+            if(project.projectImg && project.projectImg.length > 0) {
+                const slideImg = project.projectImg.map((imgSrc, index) => `
+                <div id="slide${index + 1}" class="carousel-item relative w-full">
+                    <img src="asset/img_project/${imgSrc}" class="w-full object-cover" />
+                </div>
+                `).join('');
+
+                const slideNav = project.projectImg.map((_, index) => `
+                    <a href="#slide${index + 1}" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary); border-color: var(--color-primary);">
+                        ${index + 1}
+                    </a>
+                `).join('');
+
+                carouselImg.innerHTML = slideImg;
+                carouselNav.innerHTML = slideNav;
+            } else {
+                document.getElementById("project-img").style.display = "none";
+            }
+
+            if(project.projectDemo) {
+                document.getElementById("project-demo").innerHTML = `
+                <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube-nocookie.com/embed/${project.projectDemo}" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; 
+                autoplay; 
+                clipboard-write; 
+                encrypted-media; 
+                gyroscope; 
+                picture-in-picture; 
+                web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>`;
+            } else {
+                document.getElementById("project-demo").style.display = "none";
+            }
         } else {
             title.forEach(el => {
                 el.innerText = "Project Not Found"
