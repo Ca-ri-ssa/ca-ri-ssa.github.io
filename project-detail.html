@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
     <title class="title-detail"></title>
+    <link rel="icon" type="image/png" href="asset/web-tab-icon.png">
 
     <!-- Lato Font (Body) --> 
     <style>
@@ -23,7 +24,9 @@
 </head>
 <body>
     <header>
-        <h1 class="font-bold text-[20px] tracking-wider hover:underline hover:underline-offset-4" style="font-family: var(--font-playfair); color: var(--color-primary);"><a href="index.html#">Carissa Chandra</a></h1>
+        <a href="index.html#">
+            <img src="asset/web-icon.png" width="96px" class="hover:border-b-[2px] hover:pb-[4px]">
+        </a>
 
         <nav>
             <label for="menu-toggle" class="block cursor-pointer md:hidden">
@@ -59,18 +62,18 @@
 
         <img id="project-logo" class="rounded-[8px] w-full h-[160px] md:h-[400px] object-cover mt-[20px]">
 
-        <div class="flex flex-row items-center justify-between mt-[20px]">
+        <div class="flex flex-col gap-[8px] md:flex-row md:items-center md:justify-between mt-[20px]">
             <table>
                 <tr>
-                    <td class="px-4 py-2 rounded-l-[8px]" style="background-color: var(--color-primary); color: var(--color-on-primary); outline: 2px solid var(--color-primary); font-weight: bold;">Role</td>
-                    <td id="my-role" class="px-4 py-2 rounded-r-[8px]" style="background-color: var(--container-bg-color); outline: 2px solid var(--color-primary)"></td>
+                    <td class="px-4 py-2 rounded-l-[8px] text-center" style="background-color: var(--color-primary); color: var(--color-on-primary); outline: 2px solid var(--color-primary); font-weight: bold;">Role</td>
+                    <td id="my-role" class="px-4 py-2 rounded-r-[8px] text-center" style="background-color: var(--container-bg-color); outline: 2px solid var(--color-primary)"></td>
                 </tr>
             </table>
 
-            <div id="project-duration" class="px-4 py-2 rounded-[8px]" style="background-color: var(--color-primary); color: var(--color-on-primary);"></div>
+            <div id="project-duration" class="px-4 py-2 rounded-[8px] text-center" style="background-color: var(--color-primary); color: var(--color-on-primary);"></div>
         </div>
 
-        <p id="project-desc" class="mt-[40px] text-justify">tes</p>
+        <p id="project-desc" class="mt-[32px] text-justify">tes</p>
 
         <!-- TODO: Taruh section title -->
         <div id="project-img" class="flex flex-col items-center mt-[16px]">
