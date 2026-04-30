@@ -15,8 +15,9 @@ const work_experience = async () => {
             return `
                 <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative shrink-0">
-                        <img src="asset/flowerbutton-lightmode.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
-                        <img src="asset/flowerbutton-darkmode.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+                        <img src="asset/flower-button-light.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
+                        <img src="asset/flower-button-dark.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
@@ -68,6 +69,7 @@ const all_activity = async () => {
                     <div class="flex flex-col items-center mt-[34px] relative">
                         <img src="asset/button-lightmode.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
                         <img src="asset/button-darkmode.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
@@ -141,6 +143,7 @@ const project_details = async () => {
             console.log("Project title:", project.title);
 
             document.getElementById("my-role").innerText = `${project.myRole}`;
+            document.getElementById("my-stack").innerText = project.techStacks.join(', ');
             document.getElementById("project-duration").innerHTML = `${project.startDate} &#x2013; ${project.endDate}`;
 
             document.getElementById("project-desc").innerHTML = project.description;
@@ -164,6 +167,7 @@ const project_details = async () => {
                 carouselImg.innerHTML = slideImg;
                 carouselNav.innerHTML = slideNav;
             } else {
+                document.getElementById("title-project-img").style.display = "none";
                 document.getElementById("project-img").style.display = "none";
             }
 
@@ -183,6 +187,7 @@ const project_details = async () => {
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen></iframe>`;
             } else {
+                document.getElementById("title-project-demo").style.display = "none";
                 document.getElementById("project-demo").style.display = "none";
             }
         } else {

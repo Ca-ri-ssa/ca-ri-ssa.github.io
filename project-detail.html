@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
     <title class="title-detail"></title>
-    <link rel="icon" type="image/png" href="asset/web-tab-icon.png">
+    <link rel="icon" type="image/png" href="asset/tab-icon.png">
 
     <!-- Lato Font (Body) --> 
     <style>
@@ -30,9 +30,8 @@
 
         <nav>
             <label for="menu-toggle" class="block cursor-pointer md:hidden">
-                <!-- TODO: ganti icon hamburger asli -->
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </label>
 
@@ -58,15 +57,19 @@
             <li><b><a href="#" class="title-detail"></a></b></li>
         </ul>
 
-        <h1 class="title-detail mt-[40px]" style="font-size: 28px; font-weight: bold;"></h1>
+        <h1 class="title-detail mt-[40px]" style="font-size: 28px; font-weight: bold; font-family: var(--font-playfair);"></h1>
 
         <img id="project-logo" class="rounded-[8px] w-full h-[160px] md:h-[400px] object-cover mt-[20px]">
 
-        <div class="flex flex-col gap-[8px] md:flex-row md:items-center md:justify-between mt-[20px]">
-            <table>
+        <div class="flex flex-col gap-[8px] md:flex-row md:items-start md:justify-between mt-[20px]">
+            <table class="rounded-[8px] border border-separate border-spacing-0 overflow-hidden" style="border: 2px solid var(--color-primary)">
                 <tr>
-                    <td class="px-4 py-2 rounded-l-[8px] text-center" style="background-color: var(--color-primary); color: var(--color-on-primary); outline: 2px solid var(--color-primary); font-weight: bold;">Role</td>
-                    <td id="my-role" class="px-4 py-2 rounded-r-[8px] text-center" style="background-color: var(--container-bg-color); outline: 2px solid var(--color-primary)"></td>
+                    <td class="px-4 py-2 text-start" style="background-color: var(--color-primary); color: var(--color-on-primary); font-weight: bold;">Role</td>
+                    <td id="my-role" class="px-4 py-2 text-start" style="background-color: var(--container-bg-color); border-bottom: 2px solid var(--color-primary);"></td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 text-start" style="background-color: var(--color-primary); color: var(--color-on-primary); font-weight: bold;">Tech Stacks</td>
+                    <td id="my-stack" class="px-4 py-2 text-start" style="background-color: var(--container-bg-color);"></td>
                 </tr>
             </table>
 
@@ -75,14 +78,15 @@
 
         <p id="project-desc" class="mt-[32px] text-justify">tes</p>
 
-        <!-- TODO: Taruh section title -->
-        <div id="project-img" class="flex flex-col items-center mt-[16px]">
-            <div id="carousel-img" class="carousel max-w-[1000px] max-h-[500px] mt-[20px]"></div>
+        <h2 id="title-project-img" style="font-size: 20px; text-align: center; font-weight: bold; margin-top: 40px;"
+        >Project Result</h2>
+        <div id="project-img" class="flex flex-col items-center mt-[12px]">
+            <div id="carousel-img" class="carousel max-w-[1000px] max-h-[500px]"></div>
             <div id="carousel-nav" class="flex w-full justify-center gap-2 py-2"></div>
         </div>
 
-        <!-- TOOD: Taruh section title -->
-        <div id="project-demo" class="w-full max-w-[800px] aspect-video mx-auto mt-[40px]"></div>
+        <h2 id="title-project-demo" style="font-size: 20px; text-align: center; font-weight: bold; margin-top: 40px;">Demo</h2>
+        <div id="project-demo" class="w-full max-w-[800px] aspect-video mx-auto mt-[12px]"></div>
     </main>
 
     <footer>
