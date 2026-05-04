@@ -1,3 +1,45 @@
+const savedTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+const isDark = savedTheme === "dark" || (!savedTheme && systemTheme);
+document.documentElement.classList.toggle("dark", isDark);
+document.documentElement.setAttribute("data-theme", isDark? "dark" : "light");
+
+window.addEventListener('DOMContentLoaded', () => {
+        const themeIcon = document.getElementById("theme-icon");
+
+        if(themeIcon) {
+            const isThemeIcon = isDark ? "asset/ic-moon.svg" : "asset/ic-sun.svg";
+            themeIcon.setAttribute("href", isThemeIcon);
+        }
+
+        if(document.getElementById("toogle-theme")) {
+            change_theme();
+        }
+});
+
+const change_theme = () => {
+    const toogleBtn = document.getElementById("toogle-theme");
+    const themeIcon = document.getElementById("theme-icon");
+
+    if(toogleBtn) {
+        toogleBtn.addEventListener("click", () => {
+            const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+
+            const newTheme = isDark? "light" : "dark";
+
+            document.documentElement.classList.toggle("dark", newTheme === "dark");
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+
+            if (themeIcon) {
+                const updateIcon = newTheme === "dark" ? "asset/ic-moon.svg" : "asset/ic-sun.svg";
+                themeIcon.setAttribute("href", updateIcon);
+            }
+        });
+    }
+};
+
 const work_experience = async () => {
     try{
         const response = await fetch("./portfolio-data.json");
@@ -15,8 +57,7 @@ const work_experience = async () => {
             return `
                 <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative shrink-0">
-                        <img src="asset/flower-button-light.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
-                        <img src="asset/flower-button-dark.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+                        <img width="32px" class="min-h-[32px]" style="content: var(--flower-button-image); z-index: 2;">
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
@@ -67,8 +108,7 @@ const all_activity = async () => {
             return `
                 <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative">
-                        <img src="asset/button-lightmode.png" width="32px" class="dark:hidden min-h-[32px]" style="z-index: 2;">
-                        <img src="asset/button-darkmode.png" width="32px" class="hidden dark:block min-h-[32px]" style="z-index: 2;">
+                        <img width="32px" class="min-h-[32px]" style="content: var(--round-button-image); z-index: 2;">
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
@@ -107,11 +147,11 @@ const all_project = async () => {
         const container = document.getElementById("project-container");
 
         container.innerHTML = data.projects.map(project => `
-            <div class="project-card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary); cursor: pointer;" onclick="window.location.href='project-detail.html?title=${encodeURIComponent(project.path)}'">
+            <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="project-card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
                 <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[8px]">
-                <h2 class="mt-[16px]" style="font-size: 20px"><b>${project.title}</b></h2>
+                <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
                 <p class="line-clamp-5 mt-[8px]">${project.description}</p>
-            </div>
+            </a>
         `).join('');
     } catch (error) {
         console.error("Error fetching all project data:", error);
@@ -119,7 +159,6 @@ const all_project = async () => {
 };
 
 const project_details = async () => {
-    // TODO: Buat page/file baru khusus detail project, figure out apakah github bisa fleksibel buat url path nya soalnya github hanya bisa static, kemungkinan perlu beberapa foto (array) bole pake cdn nya bootstrap utk carousel nya.
     const param = new URLSearchParams(window.location.search);
     const projectTitle = param.get("title");
 
@@ -130,7 +169,6 @@ const project_details = async () => {
         const project = data.projects.find(p => p.path === projectTitle);
 
         if(project) {
-
             const title = document.querySelectorAll(".title-detail");
 
             title.forEach(el => {

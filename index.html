@@ -41,6 +41,13 @@
                 <li><a href="#project">Project</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="flex items-center justify-center">
+                    <button id="toogle-theme">
+                        <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 440 440">
+                            <use id="theme-icon" href="asset/ic-moon.svg"></use>
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -51,12 +58,14 @@
             <h1 class="text-center md:text-wrap px-16 md:px-0">Carissa Chandra's Portfolio</h1>
             <div class="flex flex-row gap-4 items-center">
                 <a href="https://github.com/Ca-ri-ssa" class="social-media" style="background-color: var(--container-bg-color);">
-                    <img src="asset/github-logo-light.svg" alt="Github" class="dark:hidden">
-                    <img src="asset/github-logo-dark.svg" alt="Github" class="hidden dark:block">
+                    <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 640 640">
+                        <use href="asset/github-logo.svg"></use>
+                    </svg>
                 </a>
                 <a href="https://www.linkedin.com/in/carissa-chandra/" class="social-media" style="background-color: var(--container-bg-color);">
-                    <img src="asset/linkedin-logo-light.svg" alt="Linkedin" class="dark:hidden">
-                    <img src="asset/linkedin-logo-dark.svg" alt="Linkedin" class="hidden dark:block">
+                    <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 640 640">
+                        <use href="asset/linkedin-logo.svg"></use>
+                    </svg>
                 </a>
             </div>
             
@@ -64,15 +73,15 @@
             <button class="mt-16">Download Resume</button>
         </section>
 
-        <!-- FIX: Banyak yg harus diperbaiki :), bole ganti desain ye -->
         <section id="about" class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
             <h1 class="underline underline-offset-4 decoration-dashed mb-[20px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">About Me</h1>
             <div class="flex flex-col md:flex-row items-center justify-center flex-col-reverse md:justify-between">
                 <article id="about-left" class="w-108 md:w-160 mt-[40px] md:mt-0 px-8 md:px-0">
                     <h1 class="font-bold mb-[4px]" style="color: var(--color-primary); font-size: 24px;">Hi! I'm Carissa Chandra</h1>
                     <div class="flex flex-row items-center gap-2 mb-[16px]">
-                        <img src="asset/location-light.svg" alt="Location" class="dark:hidden h-[16px]">
-                        <img src="asset/location-dark.svg" alt="Location" class="hidden dark:block h-[16px]">
+                        <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 80 80">
+                            <use href="asset/ic-location.svg"></use>
+                        </svg>
                         <p style="color: var(--color-primary);">Medan, Indonesia</p>
                     </div>
                     <p class="text-justify" style="color: var(--color-primary);">An Information Systems graduate with internship experience in Back-End Development. A two-time Bangkit graduate and earned two professional certifications, including Google Associate Cloud Engineer (ACE) and Dev Certification for Android (DCA). Skilled in RESTful API development, database management, and server side applications, with additional experience in Android development.</p>
@@ -113,14 +122,11 @@
                     <div class="relative w-80 h-90 bg-white rounded-t-[300px] overflow-visible">
                         <img src="asset/carissachandra_portfolio.png" alt="Carissa Chandra" class="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 max-h-[90%]">
 
-                        <img src="asset/flower-button-light.png" alt="Round Button" class="dark:hidden absolute bottom-8 -left-14 z-20 max-h-[32%] saturate-70 constrast-90 hover:rotate-90 transition-transform duration-600">
-                        <img src="asset/flower-button-dark.png" alt="Round Button" class="hidden dark:block absolute bottom-8 -left-14 z-20 max-h-[32%] saturate-70 constrast-90 hover:rotate-90 transition-transform duration-600">
+                        <img style="content: var(--flower-button-image)" alt="Round Button" class="absolute bottom-8 -left-14 z-20 max-h-[32%] saturate-70 constrast-90 hover:rotate-90 transition-transform duration-600">
 
-                        <img src="asset/button2-light.png" alt="Button" class="dark:hidden absolute top-6 -right-6 z-30 max-h-[28%] hover:-rotate-45 transition-transform duration-600"> 
-                        <img src="asset/button2-dark.png" alt="Button" class="hidden dark:block absolute top-6 -right-6 z-30 max-h-[28%] hover:-rotate-45 transition-transform duration-600">
+                        <img style="content: var(--button-image);" alt="Button" class="absolute top-6 -right-6 z-30 max-h-[28%] hover:-rotate-45 transition-transform duration-600">
 
-                        <img src="asset/button-lightmode.png" alt="Flower Button" class="dark:hidden absolute top-31 -right-7 z-40 max-h-[16%] hover:-rotate-45 transition-transform duration-600"> 
-                        <img src="asset/button-darkmode.png" alt="Flower Button" class="hidden dark:block absolute top-31 -right-7 z-40 max-h-[16%] hover:-rotate-45 transition-transform duration-600">
+                        <img style="content: var(--round-button-image);" alt="round Button" class="absolute top-31 -right-7 z-40 max-h-[16%] hover:-rotate-45 transition-transform duration-600">
                     </div>
                 </aside>
             </div>
@@ -143,6 +149,10 @@
 
         <section id="education" class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
             <h1 class="underline underline-offset-4 decoration-dashed mb-[20px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold; margin: 0;">Education</h1>
+        </section>
+
+        <section id="contact" class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
+            <h1 class="underline underline-offset-4 decoration-dashed mb-[20px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold; margin: 0;">Contact</h1>
         </section>
     </main>
 
