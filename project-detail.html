@@ -28,31 +28,32 @@
             <img src="asset/web-icon.png" width="96px" class="hover:border-b-[2px] hover:pb-[4px]">
         </a>
 
-        <nav>
-            <label for="menu-toggle" class="block cursor-pointer md:hidden">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        <div class="flex flex-row items-center gap-4">
+            <button id="toogle-theme">
+                <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 40 40">
+                    <use id="theme-icon" href="asset/ic-moon.svg"></use>
                 </svg>
-            </label>
+            </button>
 
-            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <nav>
+                <label for="menu-toggle" class="block cursor-pointer md:hidden">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </label>
 
-            <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md p-10 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#activity">Activity</a></li>
-                <li><a href="index.html#project">Project</a></li>
-                <li><a href="index.html#education">Education</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li class="flex items-center justify-center">
-                    <button id="toogle-theme">
-                        <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 440 440">
-                            <use id="theme-icon" href="asset/ic-moon.svg"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </nav>
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+                <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md p-10 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#activity">Activity</a></li>
+                    <li><a href="index.html#project">Project</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="px-6 pb-20 md:px-20">
@@ -76,7 +77,11 @@
                 </tr>
                 <tr>
                     <td class="px-4 py-2 text-start" style="background-color: var(--color-primary); color: var(--color-on-primary); font-weight: bold;">Tech Stacks</td>
-                    <td id="my-stack" class="px-4 py-2 text-start" style="background-color: var(--container-bg-color);"></td>
+                    <td id="my-stack" class="px-4 py-2 text-start" style="background-color: var(--container-bg-color); border-bottom: 2px solid var(--color-primary);"></td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 text-start" style="background-color: var(--color-primary); color: var(--color-on-primary); font-weight: bold;">Project Link</td>
+                    <td id="link-container" class="px-4 py-2 text-start" style="background-color: var(--container-bg-color);"></td>
                 </tr>
             </table>
 

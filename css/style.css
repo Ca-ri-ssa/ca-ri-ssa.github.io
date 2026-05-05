@@ -185,6 +185,12 @@ body {
     color: var(--color-primary);
 }
 
+.highlight-word {
+    padding: 2px 4px; 
+    background-color: var(--color-primary); 
+    color: var(--color-on-primary);
+}
+
 .skills img {
     height: 24px;
 }
@@ -204,6 +210,10 @@ body {
 
 .json-list ul.listHighlighted {
     list-style-image: var(--list-highlighted-image);
+}
+
+.json-list ul li p {
+    margin-left: 0;
 }
 
 .project-card:hover {

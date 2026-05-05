@@ -25,31 +25,32 @@
             <img src="asset/web-icon.png" width="96px" class="hover:border-b-[2px] hover:pb-[4px]">
         </a>
 
-        <nav>
-            <label for="menu-toggle" class="block cursor-pointer md:hidden">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        <div class="flex flex-row items-center gap-4">
+            <button id="toogle-theme">
+                <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 40 40">
+                    <use id="theme-icon" href="asset/ic-moon.svg"></use>
                 </svg>
-            </label>
+            </button>
 
-            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <nav>
+                <label for="menu-toggle" class="block cursor-pointer md:hidden">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </label>
 
-            <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md p-10 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#activity">Activity</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="flex items-center justify-center">
-                    <button id="toogle-theme">
-                        <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 440 440">
-                            <use id="theme-icon" href="asset/ic-moon.svg"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </nav>
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+                <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md p-10 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#activity">Activity</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -119,7 +120,7 @@
                     </div>
                 </article>
                 <aside id="about-right">
-                    <div class="relative w-80 h-90 bg-white rounded-t-[300px] overflow-visible">
+                    <div class="relative w-80 h-90 bg-white rounded-t-[300px] rounded-b-[40px] overflow-visible">
                         <img src="asset/carissachandra_portfolio.png" alt="Carissa Chandra" class="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 max-h-[90%]">
 
                         <img style="content: var(--flower-button-image)" alt="Round Button" class="absolute bottom-8 -left-14 z-20 max-h-[32%] saturate-70 constrast-90 hover:rotate-90 transition-transform duration-600">
@@ -149,6 +150,7 @@
 
         <section id="education" class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
             <h1 class="underline underline-offset-4 decoration-dashed mb-[20px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold; margin: 0;">Education</h1>
+            <div id="education-container" class="flex flex-col items-center mt-[40px] gap-8"></div>
         </section>
 
         <section id="contact" class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">

@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const themeIcon = document.getElementById("theme-icon");
 
         if(themeIcon) {
-            const isThemeIcon = isDark ? "asset/ic-moon.svg" : "asset/ic-sun.svg";
+            const isThemeIcon = isDark ? "asset/ic-darkmode.svg" : "asset/ic-lightmode.svg";
             themeIcon.setAttribute("href", isThemeIcon);
         }
 
@@ -33,7 +33,7 @@ const change_theme = () => {
             localStorage.setItem("theme", newTheme);
 
             if (themeIcon) {
-                const updateIcon = newTheme === "dark" ? "asset/ic-moon.svg" : "asset/ic-sun.svg";
+                const updateIcon = newTheme === "dark" ? "asset/ic-darkmode.svg" : "asset/ic-lightmode.svg";
                 themeIcon.setAttribute("href", updateIcon);
             }
         });
@@ -148,7 +148,7 @@ const all_project = async () => {
 
         container.innerHTML = data.projects.map(project => `
             <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="project-card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
-                <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[8px]">
+                <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[12px]">
                 <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
                 <p class="line-clamp-5 mt-[8px]">${project.description}</p>
             </a>
@@ -180,9 +180,13 @@ const project_details = async () => {
             document.getElementById("project-logo").title = project.title;
             console.log("Project title:", project.title);
 
-            document.getElementById("my-role").innerText = `${project.myRole}`;
+            document.getElementById("my-role").innerText = project.myRole;
             document.getElementById("my-stack").innerText = project.techStacks.join(', ');
             document.getElementById("project-duration").innerHTML = `${project.startDate} &#x2013; ${project.endDate}`;
+
+            document.getElementById("link-container").innerHTML = project.projectLink.map(link => `
+                <a href="${link.url}" class="hover:underline hover:underline-offset-4">${link.name}</a>
+            `).join(', ');
 
             document.getElementById("project-desc").innerHTML = project.description;
 
@@ -238,7 +242,58 @@ const project_details = async () => {
     }
 };
 
+const all_education = async () => {
+    try {
+        const response = await fetch("./portfolio-data.json");
+        const data = await response.json();
+        
+        const container = document.getElementById("education-container");
+
+        container.innerHTML = data.educations.map((education, index, array) => {
+            const isCurrent = education.endDate === "PRESENT";
+            const isHighlightedStyle = isCurrent ? "background-color: var(--color-primary); color: var(--color-on-primary);" : "background-color: var(--container-bg-color)";
+            const isHighlightedListStyle = isCurrent ? "listHighlighted" : "";
+            const isLast = index === array.length - 1;
+            const isDescExist = education.description && education.description.length > 0 ? "" : "display: none;";
+            const isGradeExist = education.grade && education.grade.length > 0 ? "" : "display: none;";
+
+            return `
+                <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
+                    <div class="flex flex-col items-center mt-[34px] relative">
+                        <img width="32px" class="min-h-[32px]" style="content: var(--button-image); z-index: 2;">
+
+                        <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
+                    </div>
+                    <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${education.school}</b></h2>
+                            <p style="font-size: 14px;">${education.startDate} &#x2013; ${isCurrent ? `<b>${education.endDate}</b>` : education.endDate}</p>
+                        </div>
+                        <p style="font-size: 14px;">${education.major}</p>
+                        <div class="flex flex-row justify-start items-center gap-2 mt-2">
+                            <img src="${education.schoolImg}" alt="${education.school} logo" title="${education.school}" class="rounded-[4px] w-[24px] bg-center bg-cover">
+                            <a href="${education.schoolLink}" class="hover:underline hover:underline-offset-4">${education.school}</a>
+                        </div>
+                        <div class="flex flex-row justify-start items-center gap-2 mt-[16px]">
+                            <p>Degree: ${education.degree}</p>
+                            <p style="${isGradeExist}">&bull;</p>
+                            <p style="${isGradeExist}">Grade: ${education.grade}</p>
+                        </div>
+                        <div class="mt-[16px]" style="${isDescExist}">
+                            <p><strong>Description:</strong></p>
+                            <ul class="${isHighlightedListStyle}">${education.description}</ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    } catch (error) {
+        console.error("Error fetching all education data:", error);
+    }
+};
+
 work_experience();
 all_activity();
 all_project();
 project_details();
+all_education();
