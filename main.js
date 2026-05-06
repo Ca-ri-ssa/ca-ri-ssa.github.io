@@ -147,7 +147,7 @@ const all_project = async () => {
         const container = document.getElementById("project-container");
 
         container.innerHTML = data.projects.map(project => `
-            <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="project-card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
+            <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
                 <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[12px]">
                 <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
                 <p class="line-clamp-5 mt-[8px]">${project.description}</p>
@@ -292,8 +292,61 @@ const all_education = async () => {
     }
 };
 
+const all_certificate = async () => {
+    try {
+        const response = await fetch("./portfolio-data.json");
+        const data = await response.json();
+        const currentYear = new Date().getFullYear();
+    
+        const validCert = data.certifications.filter(cert => {
+            if (!cert.expirationDate) return true;
+            const match = cert.expirationDate.match(/\d{4}/);
+            if(match) {
+                const year = parseInt(match[0]);
+                return year >= currentYear;
+            }
+            return true;
+        });
+
+        const totalCert = validCert.length;
+        document.getElementById("total-cert").innerText = ` (${totalCert})`;
+
+        let showAllCert = false;
+
+        const displayCert = () => {
+            const certToShow = showAllCert ? validCert : validCert.slice(0, 6);
+
+            const container = document.getElementById("certificate-container");
+            container.innerHTML = certToShow.map(cert => `
+                <a href="${cert.credentialUrl}" class="card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary)">
+                    <h2 class="hover:underline hover:underline-offset-4" style="font-size: 20px; font-weight: bold;">${cert.title}</h2>
+                    <p class="flex-grow">${cert.issuer}</p>
+                    <p class="text-end mt-[8px]" style="font-size: 14px;">${cert.issueDate}${cert.expirationDate ? ` &#x2013; ${cert.expirationDate}` : ''}</p>
+                </a>
+            `).join('');
+        };
+
+        const showAllBtn = document.getElementById("show-btn-cert");
+        
+        if(validCert.length > 6) {
+            showAllBtn.addEventListener("click", () => {
+                showAllCert = !showAllCert;
+                showAllBtn.innerText = showAllCert ? "Show Less" : "Show All";
+                displayCert();
+            });
+        } else {
+            showAllBtn.style.display = "none";
+        }
+
+        displayCert();
+    } catch (error) {
+        console.error("Error fetching all certificate data:", error);
+    }
+};
+
 work_experience();
 all_activity();
 all_project();
 project_details();
 all_education();
+all_certificate();

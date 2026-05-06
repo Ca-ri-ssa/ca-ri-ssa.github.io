@@ -216,7 +216,7 @@ body {
     margin-left: 0;
 }
 
-.project-card:hover {
+.card:hover {
     box-shadow: inset 1px 1px 6px rgb(from var(--color-primary) r g b / 40%);
     transform: translateY(1px);
 }
