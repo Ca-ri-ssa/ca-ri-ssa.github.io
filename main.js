@@ -1,3 +1,6 @@
+import { CONFIG } from "./config.js" ;
+console.log("Config loaded:", CONFIG);
+
 const savedTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -201,13 +204,21 @@ const project_details = async () => {
                 `).join('');
 
                 const slideNav = project.projectImg.map((_, index) => `
-                    <a href="#slide${index + 1}" class="btn btn-xs" style="background-color: var(--container-bg-color); color: var(--color-primary); border-color: var(--color-primary);">
+                    <a href="#slide${index + 1}" class="btn btn-xs nav-indicator ${index === 0 ? 'active-indicator' : ''}">
                         ${index + 1}
                     </a>
                 `).join('');
 
                 carouselImg.innerHTML = slideImg;
                 carouselNav.innerHTML = slideNav;
+
+                const navButtons = carouselNav.querySelectorAll('.nav-indicator');
+                navButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        carouselNav.querySelector('.active-indicator')?.classList.remove('active-indicator');
+                        btn.classList.add('active-indicator');
+                    });
+                });
             } else {
                 document.getElementById("title-project-img").style.display = "none";
                 document.getElementById("project-img").style.display = "none";
@@ -344,9 +355,59 @@ const all_certificate = async () => {
     }
 };
 
+const contact_form = () => {
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    document.getElementById('api_key').value = CONFIG.API_KEY_W3FORMS;
+
+    form.addEventListener('submit', function(e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+
+        const name = formData.get('name');
+        const subject = `Carissa Chandra's Portfolio - ${name} send you a new message via Web3Forms`;
+        formData.append('subject', subject);
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Please wait..."
+
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.style.color = "var(--color-error)";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+};
+
 work_experience();
 all_activity();
 all_project();
 project_details();
 all_education();
 all_certificate();
+contact_form();

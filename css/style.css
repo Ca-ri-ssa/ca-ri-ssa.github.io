@@ -29,7 +29,7 @@
     --color-primary: #afc3b1;
     --color-on-primary: #1f5026;
     --nav-bg-color: #07120990;
-    --container-bg-color: #0b150c;
+    --container-bg-color: #131e15;
     --color-error: #ffdad6;
     --color-on-error: #93000a;
     --section-border-bottom: 6px dashed #202a22;
@@ -70,7 +70,7 @@
     --color-primary: #afc3b1;
     --color-on-primary: #1f5026;
     --nav-bg-color: #07120990;
-    --container-bg-color: #0b150c;
+    --container-bg-color: #131e15;
     --color-error: #ffdad6;
     --color-on-error: #93000a;
     --section-border-bottom: 6px dashed #202a22;
@@ -225,6 +225,46 @@ body {
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+.nav-indicator {
+    background-color: var(--container-bg-color);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    transition: all 0.2s ease-in-out;
+}
+
+.active-indicator {
+    background-color: var(--color-primary) !important;
+    color: var(--container-bg-color) !important;
+    font-weight: bold;
+}
+
+.nav-indicator:hover {
+    opacity: 70%;
+    border-color: var(--color-primary);
+}
+
+.form-field {
+    border: 2px solid var(--color-primary);
+    outline: none;
+    width: 100%;
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+.form-field:focus {
+    border-style: dashed;
+}
+
+.form-btn {
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin-top: 20px;
 }
 
 footer {
