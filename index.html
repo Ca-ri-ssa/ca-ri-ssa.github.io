@@ -18,6 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css"/>
+
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+    </style>
 </head>
 <body>
     <header>
@@ -41,7 +45,7 @@
 
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-                <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md p-10 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
+                <ul class="hidden peer-checked:flex flex-col items-center justify-center absolute top-full left-0 w-full bg-[#f1f9f2] dark:bg-[#131e15] backdrop-blur-md p-6 gap-6 shadow-xl md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-6 md:shadow-none md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#activity">Activity</a></li>
@@ -59,12 +63,12 @@
             <p class="text-center">Welcome to</p>
             <h1 class="text-center md:text-wrap px-16 md:px-0">Carissa Chandra's Portfolio</h1>
             <div class="flex flex-row gap-4 items-center">
-                <a href="https://github.com/Ca-ri-ssa" class="social-media" style="background-color: var(--container-bg-color);">
+                <a href="https://github.com/Ca-ri-ssa" class="social-media">
                     <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 640 640">
                         <use href="asset/github-logo.svg"></use>
                     </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/carissa-chandra/" class="social-media" style="background-color: var(--container-bg-color);">
+                <a href="https://www.linkedin.com/in/carissa-chandra/" class="social-media">
                     <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 640 640">
                         <use href="asset/linkedin-logo.svg"></use>
                     </svg>
@@ -88,6 +92,7 @@
                     </div>
                     <p class="text-justify" style="color: var(--color-primary);">An Information Systems graduate with internship experience in Back-End Development. A two-time Bangkit graduate and earned two professional certifications, including Google Associate Cloud Engineer (ACE) and Dev Certification for Android (DCA). Skilled in RESTful API development, database management, and server side applications, with additional experience in Android development.</p>
                     <div id="skills-set" class="flex flex-row flex-wrap gap-2 mt-[16px]">
+                        <!-- TODO: Buat skills di json, jadi lgsg auto aja -->
                         <a href="https://developer.android.com/">
                             <div class="skills">
                                 <p>Android</p>
@@ -163,6 +168,7 @@
         <section id="contact" class="flex flex-col py-20 px-6 md:px-20">
             <div class="flex flex-col items-center px-[40px] py-[25px] md:px-[80px] md:py-[50px] rounded-[20px]" style="background-color: var(--container-bg-color); border: 2px solid var(--color-primary);">
                 <h1 class="underline underline-offset-4 decoration-dashed mb-[4px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Contact</h1>
+                <!-- TODO: Change pick up line -->
                 <p class="mb-[20px]">Fill up the form below to send message!</p>
 
                 <form method="POST" id="form" class="flex flex-col items-center gap-4 w-full">
@@ -181,12 +187,58 @@
         </section>
     </main>
 
-    <footer>
-        <!-- TODO: Bikin kayak kartu nama, jadi lbh ada kesan di footer -->
-        <p style="text-align: center;">&copy; <span id="year"></span> Carissa Chandra. All rights are reserved.</p>
+    <footer class="gap-6">
+        <div class="flex flex-row items-start justify-between mb-[16px] w-full">
+            <div id="footer-greet" class="flex flex-col gap-4">
+                <div class="bg-white dark:bg-transparent dark:outline-[2px]" style="padding: 12px; width: fit-content; border-radius: 8px;">
+                    <img src="asset/web-icon.png" width="96px">
+                </div>
+                <p>Hi! Thanks for visiting my portofolio website</p>
+            </div>
+            <div id="footer-quicklink" class="flex flex-col gap-4 wrap">
+                <h2 class="underline decoration-dashed underline-offset-4" style="font-size: 20px; font-weight: bold; font-family: var(--font-playfair);">Quick Links</h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#activity">Activity</a>
+                    </li>
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#project">Project</a>
+                    </li>
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#education">Education</a>
+                    </li>
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#certificate">Certificate</a>
+                    </li>
+                    <li class="hover:underline hover:underline-offset-4">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer-connect" class="flex flex-col gap-4">
+                <h2 class="underline decoration-dashed underline-offset-4" style="font-size: 20px; font-weight: bold; font-family: var(--font-playfair);">Let's Connect!</h2>
+                <div class="flex flex-row gap-2 items-center">
+                    <a href="https://github.com/Ca-ri-ssa" class="social-media" style="margin: 0;">
+                        <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 640 640">
+                            <use href="asset/github-logo.svg"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/carissa-chandra/" class="social-media" style="margin: 0;">
+                        <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 640 640">
+                            <use href="asset/linkedin-logo.svg"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p id="footer-copyright" style="text-align: start; width: 100%;"></p>
     </footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

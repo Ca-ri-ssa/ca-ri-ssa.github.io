@@ -1,5 +1,4 @@
 import { CONFIG } from "./config.js" ;
-console.log("Config loaded:", CONFIG);
 
 const savedTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -403,6 +402,10 @@ const contact_form = () => {
             });
     });
 };
+
+const footerCopyright= document.getElementById("footer-copyright");
+const currentYear = new Date().getFullYear();
+footerCopyright.innerHTML = `&copy; ${currentYear} &bull; Carissa Chandra. All rights are reserved.`;
 
 work_experience();
 all_activity();
