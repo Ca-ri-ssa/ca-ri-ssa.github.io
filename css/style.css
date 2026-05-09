@@ -18,6 +18,7 @@
     --round-button-image: url("../asset/button-lightmode.png");
     --button-image: url("../asset/button2-light.png");
     --flower-button-image: url("../asset/flower-button-light.png");
+    --bg-hero-img: url("../asset/bg-hero-light.png");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +40,7 @@
     --round-button-image: url("../asset/button-darkmode.png");
     --button-image: url("../asset/button2-dark.png");
     --flower-button-image: url("../asset/flower-button-dark.png");
+    --bg-hero-img: url("../asset/bg-hero-dark.png");
   }
 }
 
@@ -60,6 +62,7 @@
     --round-button-image: url("../asset/button-lightmode.png");
     --button-image: url("../asset/button2-light.png");
     --flower-button-image: url("../asset/flower-button-light.png");
+    --bg-hero-img: url("../asset/bg-hero-light.png");
 }
 
 [data-theme="dark"] {
@@ -80,6 +83,7 @@
     --round-button-image: url("../asset/button-darkmode.png");
     --button-image: url("../asset/button2-dark.png");
     --flower-button-image: url("../asset/flower-button-dark.png");
+    --bg-hero-img: url("../asset/bg-hero-dark.png");
 }
 
 header {
@@ -117,8 +121,10 @@ body {
 
 #hero {
     min-height: 100vh;
-    border-bottom: var(--section-border-bottom);
     box-sizing: border-box;
+    background-image: var(--bg-hero-img);
+    background-position: center;
+    background-size: cover;
 }
 
 #hero h1 {
@@ -174,7 +180,8 @@ body {
 }
 
 .skills {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
     border-radius: 8px;
@@ -269,9 +276,7 @@ body {
 
 footer {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 40px 80px 20px 80px;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
 }

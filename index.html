@@ -83,7 +83,7 @@
             <h1 class="underline underline-offset-4 decoration-dashed mb-[40px] md:mb-0" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">About Me</h1>
             <div class="flex flex-col md:flex-row items-center justify-center flex-col-reverse md:justify-between">
                 <article id="about-left" class="w-108 md:w-160 mt-[40px] md:mt-0 px-8 md:px-0">
-                    <h1 class="font-bold mb-[4px]" style="color: var(--color-primary); font-size: 24px;">Hi! I'm Carissa Chandra</h1>
+                    <h1 class="font-bold mb-[4px] md:mt-[40px] mt-0" style="color: var(--color-primary); font-size: 24px;">Hi! I'm Carissa Chandra</h1>
                     <div class="flex flex-row items-center gap-2 mb-[16px]">
                         <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 80 80">
                             <use href="asset/ic-location.svg"></use>
@@ -91,39 +91,8 @@
                         <p style="color: var(--color-primary);">Medan, Indonesia</p>
                     </div>
                     <p class="text-justify" style="color: var(--color-primary);">An Information Systems graduate with internship experience in Back-End Development. A two-time Bangkit graduate and earned two professional certifications, including Google Associate Cloud Engineer (ACE) and Dev Certification for Android (DCA). Skilled in RESTful API development, database management, and server side applications, with additional experience in Android development.</p>
-                    <div id="skills-set" class="flex flex-row flex-wrap gap-2 mt-[16px]">
-                        <!-- TODO: Buat skills di json, jadi lgsg auto aja -->
-                        <a href="https://developer.android.com/">
-                            <div class="skills">
-                                <p>Android</p>
-                            </div>
-                        </a>
-                        <a href="https://en.wikipedia.org/wiki/JavaScript">
-                            <div class="skills">
-                                <p>Javascript</p>
-                            </div>
-                        </a>
-                        <a href="https://cloud.google.com/why-google-cloud?utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-GCP-1713664-GCP-DR-APAC-ID-id-Google-BKWS-MIX-GenericCloud&utm_content=c-Hybrid+%7C+BKWS+-+BRO+%7C+Txt+-+Generic+Cloud-Cloud+Generic-Core+GCP-ID_en-6458750523&utm_term=google+cloud&gclsrc=aw.ds&gad_source=1&gad_campaignid=12297519321&gclid=Cj0KCQjwmunNBhDbARIsAOndKpmqyiE-V5rTNfIApsIQbZyCEPxjeNsIFMUFNnsSTtFjSCdf68ffUqgaAphxEALw_wcB">
-                            <div class="skills">
-                                <p>Google Cloud Platform (GCP)</p>
-                            </div>
-                        </a>
-                        <a href="https://en.wikipedia.org/wiki/REST">
-                            <div class="skills">
-                                <p>REST API</p>
-                            </div>
-                        </a>
-                        <a href="https://www.mysql.com/">
-                            <div class="skills">
-                                <p>MySQL</p>
-                            </div>
-                        </a>
-                        <a href="https://nodejs.org/en">
-                            <div class="skills">
-                                <p>Node.js</p>
-                            </div>
-                        </a>
-                    </div>
+                    <h2 class="mt-[16px]" style="font-weight: bold; font-size: 20px;">Skills</h2>
+                    <div id="skills-set" class="flex flex-row flex-wrap gap-2 mt-[8px]"></div>
                 </article>
                 <aside id="about-right">
                     <div class="relative w-80 h-90 bg-white rounded-t-[300px] rounded-b-[40px] overflow-visible">
@@ -165,10 +134,9 @@
             <button id="show-btn-cert" class="mt-[20px] hover:underline hover:underline-offset-4" style="cursor: pointer; font-weight: bold;">Show All</button>
         </section>
 
-        <section id="contact" class="flex flex-col py-20 px-6 md:px-20">
+        <section id="contact" class="flex flex-col py-20 px-6 md:px-20" style="background-image: var(--bg-hero-img); background-position: center; background-size: cover;">
             <div class="flex flex-col items-center px-[40px] py-[25px] md:px-[80px] md:py-[50px] rounded-[20px]" style="background-color: var(--container-bg-color); border: 2px solid var(--color-primary);">
                 <h1 class="underline underline-offset-4 decoration-dashed mb-[4px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Contact</h1>
-                <!-- TODO: Change pick up line -->
                 <p class="mb-[20px]">Fill up the form below to send message!</p>
 
                 <form method="POST" id="form" class="flex flex-col items-center gap-4 w-full">
@@ -187,13 +155,13 @@
         </section>
     </main>
 
-    <footer class="gap-6">
-        <div class="flex flex-row items-start justify-between mb-[16px] w-full">
+    <footer class="gap-6 pt-[40px] pb-[20px] px-6 md:px-[80px]">
+        <div class="flex flex-row items-start justify-between w-full gap-6 flex-wrap md:flex-nowrap">
             <div id="footer-greet" class="flex flex-col gap-4">
                 <div class="bg-white dark:bg-transparent dark:outline-[2px]" style="padding: 12px; width: fit-content; border-radius: 8px;">
                     <img src="asset/web-icon.png" width="96px">
                 </div>
-                <p>Hi! Thanks for visiting my portofolio website</p>
+                <p class="max-w-[412px] text-wrap text-justify">Hi, Thanks for stopping by and scrolling to the very end!<br>If you're interested in collaborating, you can reach me through the contact form or my social media links. I look forward to hearing from you. Let's meet again!</p>
             </div>
             <div id="footer-quicklink" class="flex flex-col gap-4 wrap">
                 <h2 class="underline decoration-dashed underline-offset-4" style="font-size: 20px; font-weight: bold; font-family: var(--font-playfair);">Quick Links</h2>

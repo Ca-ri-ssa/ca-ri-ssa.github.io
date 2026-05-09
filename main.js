@@ -42,11 +42,31 @@ const change_theme = () => {
     }
 };
 
+const skill_set = async () => {
+    try {
+        const response = await fetch("./portfolio-data.json");
+        const data = await response.json();
+        const skill = data.mySkills;
+
+        const skillSet = document.getElementById("skills-set");
+
+        skillSet.innerHTML = skill.map(s => `
+            <a href="${s.link}" class="skills">
+                <svg style="color: var(--color-primary); fill: currentColor; width: 24px; height: 24px;" viewBox="0 0 40 40">
+                    <use href="${s.icon}"></use>
+                </svg>
+                <p>${s.name}</p>
+            </a>
+        `).join('');
+    } catch (error) {
+        console.error("Error fetching featured skills data:", error);
+    }
+};
+
 const work_experience = async () => {
     try{
         const response = await fetch("./portfolio-data.json");
         const data = await response.json();
-        console.log("Number of experience found:", data.experiences.length);
 
         const container = document.getElementById("experience-container");
 
@@ -97,7 +117,6 @@ const all_activity = async () => {
     try {
         const response = await fetch("./portfolio-data.json");
         const data = await response.json();
-        console.log("Number of activity found:", data.activities.length);
 
         const container = document.getElementById("activity-container");
 
@@ -144,7 +163,6 @@ const all_project = async () => {
     try {
         const response = await fetch("./portfolio-data.json");
         const data = await response.json();
-        console.log("Number of project found:", data.projects.length);
 
         const container = document.getElementById("project-container");
 
@@ -237,7 +255,8 @@ const project_details = async () => {
                 picture-in-picture; 
                 web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>`;
+                allowfullscreen
+                class="rounded-[20px]"></iframe>`;
             } else {
                 document.getElementById("title-project-demo").style.display = "none";
                 document.getElementById("project-demo").style.display = "none";
@@ -407,6 +426,7 @@ const footerCopyright= document.getElementById("footer-copyright");
 const currentYear = new Date().getFullYear();
 footerCopyright.innerHTML = `&copy; ${currentYear} &bull; Carissa Chandra. All rights are reserved.`;
 
+skill_set();
 work_experience();
 all_activity();
 all_project();

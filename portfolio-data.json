@@ -1,4 +1,41 @@
 {
+    "mySkills": [
+        {
+            "name": "Javascript",
+            "icon": "asset/ic-javascript.svg",
+            "link": "https://en.wikipedia.org/wiki/JavaScript"
+        },
+        {
+            "name": "Node.js",
+            "icon": "asset/ic-nodejs.svg",
+            "link": "https://nodejs.org/en"
+        },
+        {
+            "name": "RESTful API",
+            "icon": "asset/ic-restapi.svg",
+            "link": "https://en.wikipedia.org/wiki/REST"
+        },
+        {
+            "name": "Google Cloud Platform",
+            "icon": "asset/ic-gcp.svg",
+            "link": "https://en.wikipedia.org/wiki/Google_Cloud_Platform"
+        },
+        {
+            "name": "Kotlin",
+            "icon": "asset/ic-kotlin.svg",
+            "link": "https://kotlinlang.org/"
+        },
+        {
+            "name": "Android",
+            "icon": "asset/ic-android.svg",
+            "link": "https://developer.android.com/"
+        },
+        {
+            "name": "MySQL",
+            "icon": "asset/ic-mysql.svg",
+            "link": "https://www.mysql.com/"
+        }
+    ],
     "educations": [
         {
             "school": "Universitas Pelita Harapan",
@@ -34,30 +71,6 @@
             "startDate": "AUG 2023",
             "endDate": "OCT 2024",
             "skills": ["Bun", "Flask", "RESTful API"],
-            "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
-        },
-        {
-            "title": "tes1 ps: jgn lupa hapus ini",
-            "place": "Remote",
-            "type": "Internship",
-            "company": "Braincore",
-            "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
-            "companyLink": "https://braincore.id/",
-            "startDate": "AUG 2023",
-            "endDate": "PRESENT",
-            "skills": ["Bun", "Flask", "RESTful API"],
-            "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
-        },
-        {
-            "title": "tes2 tertua ps: jgn lupa hapus ini",
-            "place": "Remote",
-            "type": "Internship",
-            "company": "Braincore",
-            "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
-            "companyLink": "https://braincore.id/",
-            "startDate": "AUG 2023",
-            "endDate": "Nope",
-            "skills": ["Bun", "Flask", "RESTful API", "MySQL"],
             "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
         }
     ],
