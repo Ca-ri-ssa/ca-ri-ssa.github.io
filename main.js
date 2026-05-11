@@ -89,7 +89,7 @@ const work_experience = async () => {
             const isLast = index === array.length - 1;
 
             return `
-                <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
+                <div class="flex flex-row gap-2 md:gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative shrink-0">
                         <img width="32px" class="min-h-[32px]" style="content: var(--flower-button-image); z-index: 2;">
 
@@ -139,7 +139,7 @@ const all_activity = async () => {
             const isLast = index === array.length - 1;
 
             return `
-                <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
+                <div class="flex flex-row gap-2 md:gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative">
                         <img width="32px" class="min-h-[32px]" style="content: var(--round-button-image); z-index: 2;">
 
@@ -188,7 +188,7 @@ const all_project = async () => {
             const container = document.getElementById("project-container");
             container.innerHTML = projectsToShow.map(project => `
                 <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
-                    <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[12px]">
+                    <img src="${project.projectLogo}" alt="${project.title}" class="h-[120px] rounded-[12px] object-cover object-center">
                     <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
                     <p class="line-clamp-5 mt-[8px]">${project.description}</p>
                 </a>
@@ -321,7 +321,7 @@ const all_education = async () => {
             const isGradeExist = education.grade && education.grade.length > 0 ? "" : "display: none;";
 
             return `
-                <div class="flex flex-row gap-6 w-[400px] md:w-[900px]">
+                <div class="flex flex-row gap-2 md:gap-6 w-[400px] md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative">
                         <img width="32px" class="min-h-[32px]" style="content: var(--button-image); z-index: 2;">
 
