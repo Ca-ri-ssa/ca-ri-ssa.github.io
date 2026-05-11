@@ -89,14 +89,14 @@ const work_experience = async () => {
             const isLast = index === array.length - 1;
 
             return `
-                <div class="flex flex-row gap-2 md:gap-6 w-[400px] md:w-[900px]">
+                <div class="flex flex-row gap-2 md:gap-6 w-full md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative shrink-0">
                         <img width="32px" class="min-h-[32px]" style="content: var(--flower-button-image); z-index: 2;">
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
-                        <div class="flex flex-row justify-between items-center">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0">
                             <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${exp.title}</b></h2>
                             <p style="font-size: 14px;">${exp.startDate} &#x2013; ${isCurrent ? `<b>${exp.endDate}</b>` : exp.endDate}</p>
                         </div>
@@ -139,14 +139,14 @@ const all_activity = async () => {
             const isLast = index === array.length - 1;
 
             return `
-                <div class="flex flex-row gap-2 md:gap-6 w-[400px] md:w-[900px]">
+                <div class="flex flex-row gap-2 md:gap-6 w-full md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative">
                         <img width="32px" class="min-h-[32px]" style="content: var(--round-button-image); z-index: 2;">
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
-                        <div class="flex flex-row justify-between items-center">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0">
                             <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${activity.title}</b></h2>
                             <p style="font-size: 14px;">${activity.startDate} &#x2013; ${isCurrent ? `<b>${activity.endDate}</b>` : activity.endDate}</p>
                         </div>
@@ -321,14 +321,14 @@ const all_education = async () => {
             const isGradeExist = education.grade && education.grade.length > 0 ? "" : "display: none;";
 
             return `
-                <div class="flex flex-row gap-2 md:gap-6 w-[400px] md:w-[900px]">
+                <div class="flex flex-row gap-2 md:gap-6 w-full md:w-[900px]">
                     <div class="flex flex-col items-center mt-[34px] relative">
                         <img width="32px" class="min-h-[32px]" style="content: var(--button-image); z-index: 2;">
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
-                        <div class="flex flex-row justify-between items-center">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0">
                             <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${education.school}</b></h2>
                             <p style="font-size: 14px;">${education.startDate} &#x2013; ${isCurrent ? `<b>${education.endDate}</b>` : education.endDate}</p>
                         </div>
