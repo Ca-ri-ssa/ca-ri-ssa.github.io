@@ -274,6 +274,15 @@ body {
     margin-top: 20px;
 }
 
+.badge-total {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 footer {
     display: flex;
     flex-direction: column;

@@ -42,6 +42,18 @@ const change_theme = () => {
     }
 };
 
+const download_resume = () => {
+    const linkDownload = document.createElement('a');
+    linkDownload.href = "asset/resume/carissachandra_resume_09052026.pdf"
+    linkDownload.download = "CarissaChandra_Resume.pdf";
+    linkDownload.click();
+};
+
+const downloadBtn = document.getElementById("download-resume");
+if (downloadBtn) {
+    downloadBtn.addEventListener("click", download_resume);
+}
+
 const skill_set = async () => {
     try {
         const response = await fetch("./portfolio-data.json");
@@ -163,16 +175,38 @@ const all_project = async () => {
     try {
         const response = await fetch("./portfolio-data.json");
         const data = await response.json();
+        const allProjectData = data.projects;
 
-        const container = document.getElementById("project-container");
+        const totalProject = allProjectData.length;
+        document.getElementById("total-project").innerHTML = `${totalProject}`;
 
-        container.innerHTML = data.projects.map(project => `
-            <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
-                <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[12px]">
-                <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
-                <p class="line-clamp-5 mt-[8px]">${project.description}</p>
-            </a>
-        `).join('');
+        let showAllProject = false;
+
+        const displayAllProject = () => {
+            const projectsToShow = showAllProject ? allProjectData : allProjectData.slice(0, 8);
+
+            const container = document.getElementById("project-container");
+            container.innerHTML = projectsToShow.map(project => `
+                <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
+                    <img src="${project.projectLogo}" alt="${project.title}" class="rounded-[12px]">
+                    <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
+                    <p class="line-clamp-5 mt-[8px]">${project.description}</p>
+                </a>
+            `).join('');
+        };
+
+        const showAllBtn = document.getElementById("show-btn-proj");
+        if(totalProject > 8) {
+            showAllBtn.addEventListener("click", () => {
+                showAllProject = !showAllProject;
+                showAllBtn.innerText = showAllProject ? "Show Less" : "Show All";
+                displayAllProject();
+            });
+        } else {
+            showAllBtn.style.display = "none";
+        }
+
+        displayAllProject();
     } catch (error) {
         console.error("Error fetching all project data:", error);
     }
@@ -256,7 +290,7 @@ const project_details = async () => {
                 web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-                class="rounded-[20px]"></iframe>`;
+                class="rounded-[8px]"></iframe>`;
             } else {
                 document.getElementById("title-project-demo").style.display = "none";
                 document.getElementById("project-demo").style.display = "none";
@@ -338,7 +372,7 @@ const all_certificate = async () => {
         });
 
         const totalCert = validCert.length;
-        document.getElementById("total-cert").innerText = ` (${totalCert})`;
+        document.getElementById("total-cert").innerHTML = `${totalCert}`;
 
         let showAllCert = false;
 
@@ -357,7 +391,7 @@ const all_certificate = async () => {
 
         const showAllBtn = document.getElementById("show-btn-cert");
         
-        if(validCert.length > 6) {
+        if(totalCert > 6) {
             showAllBtn.addEventListener("click", () => {
                 showAllCert = !showAllCert;
                 showAllBtn.innerText = showAllCert ? "Show Less" : "Show All";
