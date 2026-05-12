@@ -80,7 +80,7 @@
 
         <section id="about" class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
             <h1 class="underline underline-offset-4 decoration-dashed mb-[40px] md:mb-0" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">About Me</h1>
-            <div class="flex flex-col md:flex-row items-center justify-center flex-col-reverse md:justify-between">
+            <div class="flex flex-col-reverse items-center justify-center md:flex-row md:justify-between">
                 <article id="about-left" class="w-108 md:w-160 mt-[40px] md:mt-0 px-8 md:px-0">
                     <h1 class="font-bold mb-[4px] md:mt-[40px] mt-0" style="color: var(--color-primary); font-size: 24px;">Hi! I'm Carissa Chandra</h1>
                     <div class="flex flex-row items-center gap-2 mb-[16px]">
@@ -113,13 +113,13 @@
         </section>
 
         <section id="activity"class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
-            <h1 class="underline underline-offset-4 decoration-dashed" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Activities</h1>
+            <h1 class="underline underline-offset-4 decoration-dashed" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Activity</h1>
             <div id="activity-container" class="flex flex-col items-center mt-[40px] gap-8"></div>
         </section>
         
         <section id="project"class="flex flex-col py-20 px-6 md:px-20" style="border-bottom: var(--section-border-bottom);">
             <div class="flex flex-row gap-2 items-end">
-                <h1 class="underline underline-offset-4 decoration-dashed" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Projects</h1>
+                <h1 class="underline underline-offset-4 decoration-dashed" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Project</h1>
                 <p id="total-project" class="badge-total"></p>
             </div>
             <div id="project-container" class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-[40px] place-content-center"></div>
@@ -145,7 +145,7 @@
         <section id="contact" class="flex flex-col py-20 px-6 md:px-20" style="background-image: var(--bg-hero-img); background-position: center; background-size: cover;">
             <div class="flex flex-col items-center px-[40px] py-[25px] md:px-[80px] md:py-[50px] rounded-[20px]" style="background-color: var(--container-bg-color); border: 2px solid var(--color-primary);">
                 <h1 class="underline underline-offset-4 decoration-dashed mb-[4px]" style="font-family: var(--font-playfair); font-size: 28px; color: var(--color-primary); font-weight: bold;">Contact</h1>
-                <p class="mb-[20px]">Fill up the form below to send message!</p>
+                <p class="mb-[20px] text-center">Fill up the form below to send message!</p>
 
                 <form method="POST" id="form" class="flex flex-col items-center gap-4 w-full">
                     <input type="hidden" name="access_key" id="api_key">
