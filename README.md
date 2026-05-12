@@ -19,4 +19,5 @@ This repository is where I build my portfolio website.
 - Google Fonts
 - Tailwind CSS
 - Daisy UI
+- Web3Forms
 - Github Pages
