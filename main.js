@@ -458,7 +458,9 @@ const contact_form = () => {
 
 const footerCopyright= document.getElementById("footer-copyright");
 const currentYear = new Date().getFullYear();
-footerCopyright.innerHTML = `&copy; ${currentYear} &bull; Carissa Chandra. All rights are reserved.`;
+const publishedYear = 2026;
+const displayYear = currentYear > publishedYear ? `${publishedYear} &#x2013; ${currentYear}` : currentYear;
+footerCopyright.innerHTML = `&copy; ${displayYear} Carissa Chandra. All Rights Reserved.`;
 
 skill_set();
 work_experience();

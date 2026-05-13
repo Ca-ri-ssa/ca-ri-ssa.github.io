@@ -151,9 +151,7 @@ body {
 }
 
 #hero button:hover {
-    background-color: var(--container-bg-color);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    transform: translateY(3px);
 }
 
 .social-media {
@@ -276,9 +274,7 @@ body {
 }
 
 .form-btn:hover {
-    background-color: var(--container-bg-color);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    transform: translateY(3px);
 }
 
 .badge-total {
