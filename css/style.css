@@ -86,6 +86,11 @@
     --bg-hero-img: url("../asset/bg-hero-dark.png");
 }
 
+html {
+    scrollbar-color:  var(--color-primary) var(--container-bg-color);
+    scrollbar-width: auto;
+}
+
 header {
     padding: 0 40px;
     height: 80px;
