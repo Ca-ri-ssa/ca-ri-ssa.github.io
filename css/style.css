@@ -135,12 +135,6 @@ body {
     font-weight: bolder;
 }
 
-#hero p {
-    font-size: 18px;
-    color: var(--color-primary);
-    margin: 0;
-}
-
 #hero button {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
@@ -268,7 +262,7 @@ body {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
     border-radius: 12px;
-    padding: 8px 16px;
+    padding-block: 10px;
     margin-top: 20px;
     font-weight: bold;
 }
