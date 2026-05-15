@@ -335,17 +335,17 @@ const all_education = async () => {
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
-                            <h2 style="font-size: 20px;"><b>${education.school}</b></h2>
+                            <div class="flex flex-row justify-start items-center gap-3">
+                                <img src="${education.schoolImg}" alt="${education.school} logo" title="${education.school}" class="rounded-[4px] w-[40px] bg-center bg-cover">
+                                <a href="${education.schoolLink}" class="hover:underline hover:underline-offset-4" style="font-size: 20px;">
+                                    <b>${education.school}</b>
+                                </a>
+                            </div>
                             <p class="text-nowrap" style="font-size: 14px;">${education.startDate} &#x2013; ${isCurrent ? `<b>${education.endDate}</b>` : education.endDate}</p>
                         </div>
                         <p style="font-size: 14px;">${education.major}</p>
-                        <div class="flex flex-row justify-start items-center gap-2 mt-2">
-                            <img src="${education.schoolImg}" alt="${education.school} logo" title="${education.school}" class="rounded-[4px] w-[24px] bg-center bg-cover">
-                            <a href="${education.schoolLink}" class="hover:underline hover:underline-offset-4">${education.school}</a>
-                        </div>
-                        <div class="flex flex-col md:flex-row justify-start items-start md:items-center gap-0 md:gap-2 mt-[16px]">
+                        <div class="flex flex-col justify-start items-start mt-[8px]">
                             <p><b>Degree:</b> ${education.degree}</p>
-                            <p class="hidden md:block" style="${isGradeAvail}">&bull;</p>
                             <p style="${isGradeAvail}"><b>Grade:</b> ${education.grade}</p>
                         </div>
                         <div class="mt-[16px]" style="${isDescAvail}">
