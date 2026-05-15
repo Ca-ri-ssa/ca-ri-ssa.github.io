@@ -87,18 +87,20 @@ const work_experience = async () => {
             const isHighlightedStyle = isCurrent ? "background-color: var(--color-primary); color: var(--color-on-primary);" : "background-color: var(--container-bg-color)";
             const isHighlightedListStyle = isCurrent ? "listHighlighted" : "";
             const isLast = index === array.length - 1;
+            const isDescAvail = exp.description ? "" : "display: none";
+            const isSkillsAvail = exp.skills && exp.skills.length > 0 ? "" : "display: none";
 
             return `
                 <div class="flex flex-row gap-2 md:gap-6 w-full md:w-[900px]">
-                    <div class="flex flex-col items-center mt-[34px] relative shrink-0">
+                    <div class="flex flex-col items-center mt-[34px] relative">
                         <img width="32px" class="min-h-[32px]" style="content: var(--flower-button-image); z-index: 2;">
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0">
-                            <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${exp.title}</b></h2>
-                            <p style="font-size: 14px;">${exp.startDate} &#x2013; ${isCurrent ? `<b>${exp.endDate}</b>` : exp.endDate}</p>
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
+                            <h2 style="font-size: 20px;"><b>${exp.title}</b></h2>
+                            <p class="text-nowrap" style="font-size: 14px;">${exp.startDate} &#x2013; ${isCurrent ? `<b>${exp.endDate}</b>` : exp.endDate}</p>
                         </div>
                         <div class="flex flex-row gap-2 items-center">
                             <p style="font-size: 14px;">${exp.place}</p>
@@ -109,12 +111,14 @@ const work_experience = async () => {
                             <img src="${exp.companyImg}" alt="${exp.company} logo" title="${exp.company}" class="rounded-[4px] w-[24px] bg-center bg-cover">
                             <a href="${exp.companyLink}" class="hover:underline hover:underline-offset-4">${exp.company}</a>
                         </div>
-                        <p class="mt-[16px]"><strong>Description:</strong></p>
-                        <ul class="${isHighlightedListStyle}">${exp.description}</ul>
-                        <div class="flex flex-row mt-[16px] flex-wrap gap-1">
-                            ${exp.skills.map(skill => `
+                        <p style="${isDescAvail};" class="mt-[16px]"><strong>Description:</strong></p>
+                        <ul style="${isDescAvail};" class="${isHighlightedListStyle}">
+                            ${exp.description}
+                        </ul>
+                        <div style="${isSkillsAvail};" class="flex flex-row mt-[16px] flex-wrap gap-1">
+                            ${exp.skills && exp.skills.length > 0 ? exp.skills.map(skill => `
                                 <div class="py-[4px] px-[6px]" style="border-radius: 8px; border: 2px solid var(--color-primary); background-color: var(--container-bg-color); color: var(--color-primary); font-size: 12px;">${skill}</div>
-                            `).join('')}
+                            `).join('') : ''}
                         </div>
                     </div>
                 </div>
@@ -137,6 +141,8 @@ const all_activity = async () => {
             const isHighlightedStyle = isCurrent ? "background-color: var(--color-primary); color: var(--color-on-primary);" : "background-color: var(--container-bg-color)";
             const isHighlightedListStyle = isCurrent ? "listHighlighted" : "";
             const isLast = index === array.length - 1;
+            const isDescAvail = activity.description ? "" : "display: none";
+            const isSkillsAvail = activity.skills && activity.skills.length > 0 ? "" : "display: none";
 
             return `
                 <div class="flex flex-row gap-2 md:gap-6 w-full md:w-[900px]">
@@ -146,21 +152,21 @@ const all_activity = async () => {
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0">
-                            <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${activity.title}</b></h2>
-                            <p style="font-size: 14px;">${activity.startDate} &#x2013; ${isCurrent ? `<b>${activity.endDate}</b>` : activity.endDate}</p>
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
+                            <h2 style="font-size: 20px;"><b>${activity.title}</b></h2>
+                            <p class="text-nowrap" style="font-size: 14px;">${activity.startDate} &#x2013; ${isCurrent ? `<b>${activity.endDate}</b>` : activity.endDate}</p>
                         </div>
                         <p style="font-size: 14px;">${activity.type}</p>
                         <div class="flex flex-row justify-start items-center gap-2 mt-2">
                             <img src="${activity.organizationImg}" alt="${activity.organization} logo" title="${activity.organization}" class="rounded-[4px] w-[24px] bg-center bg-cover">
                             <a href="${activity.organizationLink}" class="hover:underline hover:underline-offset-4">${activity.organization}</a>
                         </div>
-                        <p class="mt-[16px]"><strong>Description:</strong></p>
-                        <ul class="${isHighlightedListStyle}">${activity.description}</ul>
-                        <div class="flex flex-row mt-[16px] flex-wrap gap-1">
-                            ${activity.skills.map(skill => `
+                        <p style="${isDescAvail};" class="mt-[16px]"><strong>Description:</strong></p>
+                        <ul style="${isDescAvail};" class="${isHighlightedListStyle}">${activity.description}</ul>
+                        <div style="${isSkillsAvail};" class="flex flex-row mt-[16px] flex-wrap gap-1">
+                            ${activity.skills && activity.skills.length > 0 ? activity.skills.map(skill => `
                                 <div class="py-[4px] px-[6px]" style="border-radius: 8px; border: 2px solid var(--color-primary); background-color: var(--container-bg-color); color: var(--color-primary); font-size: 12px;">${skill}</div>
-                            `).join('')}
+                            `).join('') : ''}
                         </div>
                     </div>
                 </div>
@@ -317,8 +323,8 @@ const all_education = async () => {
             const isHighlightedStyle = isCurrent ? "background-color: var(--color-primary); color: var(--color-on-primary);" : "background-color: var(--container-bg-color)";
             const isHighlightedListStyle = isCurrent ? "listHighlighted" : "";
             const isLast = index === array.length - 1;
-            const isDescExist = education.description && education.description.length > 0 ? "" : "display: none;";
-            const isGradeExist = education.grade && education.grade.length > 0 ? "" : "display: none;";
+            const isDescAvail = education.description && education.description.length > 0 ? "" : "display: none;";
+            const isGradeAvail = education.grade && education.grade.length > 0 ? "" : "display: none;";
 
             return `
                 <div class="flex flex-row gap-2 md:gap-6 w-full md:w-[900px]">
@@ -328,21 +334,21 @@ const all_education = async () => {
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
                     <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0">
-                            <h2 class="me-[8px] md:me-0" style="font-size: 20px;"><b>${education.school}</b></h2>
-                            <p style="font-size: 14px;">${education.startDate} &#x2013; ${isCurrent ? `<b>${education.endDate}</b>` : education.endDate}</p>
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
+                            <h2 style="font-size: 20px;"><b>${education.school}</b></h2>
+                            <p class="text-nowrap" style="font-size: 14px;">${education.startDate} &#x2013; ${isCurrent ? `<b>${education.endDate}</b>` : education.endDate}</p>
                         </div>
                         <p style="font-size: 14px;">${education.major}</p>
                         <div class="flex flex-row justify-start items-center gap-2 mt-2">
                             <img src="${education.schoolImg}" alt="${education.school} logo" title="${education.school}" class="rounded-[4px] w-[24px] bg-center bg-cover">
                             <a href="${education.schoolLink}" class="hover:underline hover:underline-offset-4">${education.school}</a>
                         </div>
-                        <div class="flex flex-row justify-start items-center gap-2 mt-[16px]">
-                            <p>Degree: ${education.degree}</p>
-                            <p style="${isGradeExist}">&bull;</p>
-                            <p style="${isGradeExist}">Grade: ${education.grade}</p>
+                        <div class="flex flex-col md:flex-row justify-start items-start md:items-center gap-0 md:gap-2 mt-[16px]">
+                            <p><b>Degree:</b> ${education.degree}</p>
+                            <p class="hidden md:block" style="${isGradeAvail}">&bull;</p>
+                            <p style="${isGradeAvail}"><b>Grade:</b> ${education.grade}</p>
                         </div>
-                        <div class="mt-[16px]" style="${isDescExist}">
+                        <div class="mt-[16px]" style="${isDescAvail}">
                             <p><strong>Description:</strong></p>
                             <ul class="${isHighlightedListStyle}">${education.description}</ul>
                         </div>
