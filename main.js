@@ -245,7 +245,7 @@ const project_details = async () => {
             document.getElementById("project-duration").innerHTML = `${project.startDate} &#x2013; ${project.endDate}`;
 
             document.getElementById("link-container").innerHTML = project.projectLink.map(link => `
-                <a href="${link.url}" class="hover:underline hover:underline-offset-4">${link.name}</a>
+                <a href="${link.url}" class="underline underline-offset-4">${link.name}</a>
             `).join(', ');
 
             document.getElementById("project-desc").innerHTML = project.description;
