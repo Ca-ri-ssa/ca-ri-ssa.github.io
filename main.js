@@ -97,21 +97,21 @@ const work_experience = async () => {
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
-                    <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
+                    <div class="json-list p-[20px] md:px-8 md:py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
                             <h2 style="font-size: 20px;"><b>${exp.title}</b></h2>
                             <p class="text-nowrap" style="font-size: 14px;">${exp.startDate} &#x2013; ${isCurrent ? `<b>${exp.endDate}</b>` : exp.endDate}</p>
                         </div>
+
                         <div class="flex flex-row gap-2 items-center">
                             <p style="font-size: 14px;">${exp.place}</p>
                             <p>&bull;</p>
                             <p style="font-size: 14px;">${exp.type}</p>
                         </div>
-                        <div class="flex flex-row justify-start items-center gap-2 mt-2">
-                            <img src="${exp.companyImg}" alt="${exp.company} logo" title="${exp.company}" class="rounded-[4px] w-[24px] bg-center bg-cover">
-                            <a href="${exp.companyLink}" class="hover:underline hover:underline-offset-4">${exp.company}</a>
-                        </div>
-                        <p style="${isDescAvail};" class="mt-[16px]"><strong>Description:</strong></p>
+                        
+                        <a href="${exp.companyLink}" class="inline-flex mt-[8px] hover:underline hover:underline-offset-4" style="font-weight: bold;">${exp.company}</a>
+
+                        <p style="${isDescAvail};" class="mt-[16px]">Description:</p>
                         <ul style="${isDescAvail};" class="${isHighlightedListStyle}">
                             ${exp.description}
                         </ul>
@@ -151,17 +151,16 @@ const all_activity = async () => {
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
-                    <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
+                    <div class="json-list p-[20px] md:px-8 md:py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
                             <h2 style="font-size: 20px;"><b>${activity.title}</b></h2>
                             <p class="text-nowrap" style="font-size: 14px;">${activity.startDate} &#x2013; ${isCurrent ? `<b>${activity.endDate}</b>` : activity.endDate}</p>
                         </div>
                         <p style="font-size: 14px;">${activity.type}</p>
-                        <div class="flex flex-row justify-start items-center gap-2 mt-2">
-                            <img src="${activity.organizationImg}" alt="${activity.organization} logo" title="${activity.organization}" class="rounded-[4px] w-[24px] bg-center bg-cover">
-                            <a href="${activity.organizationLink}" class="hover:underline hover:underline-offset-4">${activity.organization}</a>
-                        </div>
-                        <p style="${isDescAvail};" class="mt-[16px]"><strong>Description:</strong></p>
+                        
+                        <a href="${activity.organizationLink}" class="inline-flex mt-[8px] hover:underline hover:underline-offset-4" style="font-weight: bold;">${activity.organization}</a>
+
+                        <p style="${isDescAvail};" class="mt-[16px]">Description:</p>
                         <ul style="${isDescAvail};" class="${isHighlightedListStyle}">${activity.description}</ul>
                         <div style="${isSkillsAvail};" class="flex flex-row mt-[16px] flex-wrap gap-1">
                             ${activity.skills && activity.skills.length > 0 ? activity.skills.map(skill => `
@@ -333,14 +332,11 @@ const all_education = async () => {
 
                         <div class="rounded-xl flex grow" style="position: absolute; top: 40px; bottom: -58px; width: 2px; background-color: var(--color-primary); z-index: 1; width: 2px; background-color: var(--color-primary); ${isLast ? 'display: none;' : ''}"></div>
                     </div>
-                    <div class="json-list px-8 py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
+                    <div class="json-list p-[20px] md:px-8 md:py-6 rounded-[20px] border-[2px] flex-1" style="${isHighlightedStyle}; border-color: var(--color-primary);">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-[8px] md:mb-0 gap-0 md:gap-8">
-                            <div class="flex flex-row justify-start items-center gap-3">
-                                <img src="${education.schoolImg}" alt="${education.school} logo" title="${education.school}" class="rounded-[4px] w-[40px] bg-center bg-cover">
-                                <a href="${education.schoolLink}" class="hover:underline hover:underline-offset-4" style="font-size: 20px;">
-                                    <b>${education.school}</b>
-                                </a>
-                            </div>
+                            <a href="${education.schoolLink}" class="hover:underline hover:underline-offset-4" style="font-size: 20px;">
+                                <b>${education.school}</b>
+                            </a>
                             <p class="text-nowrap" style="font-size: 14px;">${education.startDate} &#x2013; ${isCurrent ? `<b>${education.endDate}</b>` : education.endDate}</p>
                         </div>
                         <p style="font-size: 14px;">${education.major}</p>
@@ -349,7 +345,7 @@ const all_education = async () => {
                             <p style="${isGradeAvail}"><b>Grade:</b> ${education.grade}</p>
                         </div>
                         <div class="mt-[16px]" style="${isDescAvail}">
-                            <p><strong>Description:</strong></p>
+                            <p>Description:</p>
                             <ul class="${isHighlightedListStyle}">${education.description}</ul>
                         </div>
                     </div>
