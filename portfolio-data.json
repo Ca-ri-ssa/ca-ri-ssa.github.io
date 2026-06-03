@@ -68,7 +68,7 @@
             "company": "Braincore",
             "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
             "companyLink": "https://braincore.id/",
-            "startDate": "AUG 2023",
+            "startDate": "AUG 2024",
             "endDate": "OCT 2024",
             "skills": ["Bun", "Flask", "RESTful API"],
             "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
