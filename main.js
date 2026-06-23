@@ -44,8 +44,8 @@ const change_theme = () => {
 
 const download_resume = () => {
     const linkDownload = document.createElement('a');
-    linkDownload.href = "asset/resume/carissachandra_resume_23062026.pdf"
-    linkDownload.download = "CarissaChandra_Resume.pdf";
+    linkDownload.href = "/asset/resume/carissachandra-resume-23062026.pdf"
+    linkDownload.download = "CarissaChandra-Resume.pdf";
     linkDownload.click();
 };
 
