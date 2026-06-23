@@ -1,6 +1,6 @@
 import { CONFIG } from "./config.js" ;
 
-const savedTheme = localStorage.getItem("theme");
+const savedTheme = localStorage.getItem(CONFIG.THEME_KEY);
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 const isDark = savedTheme === "dark" || (!savedTheme && systemTheme);
@@ -8,16 +8,16 @@ document.documentElement.classList.toggle("dark", isDark);
 document.documentElement.setAttribute("data-theme", isDark? "dark" : "light");
 
 window.addEventListener('DOMContentLoaded', () => {
-        const themeIcon = document.getElementById("theme-icon");
+    const themeIcon = document.getElementById("theme-icon");
 
-        if(themeIcon) {
-            const isThemeIcon = isDark ? "asset/ic-darkmode.svg" : "asset/ic-lightmode.svg";
-            themeIcon.setAttribute("href", isThemeIcon);
-        }
+    if(themeIcon) {
+        const isThemeIcon = isDark ? "asset/ic-darkmode.svg" : "asset/ic-lightmode.svg";
+        themeIcon.setAttribute("href", isThemeIcon);
+    }
 
-        if(document.getElementById("toogle-theme")) {
-            change_theme();
-        }
+    if(document.getElementById("toogle-theme")) {
+        change_theme();
+    }
 });
 
 const change_theme = () => {
@@ -32,7 +32,7 @@ const change_theme = () => {
 
             document.documentElement.classList.toggle("dark", newTheme === "dark");
             document.documentElement.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
+            localStorage.setItem(CONFIG.THEME_KEY, newTheme);
 
             if (themeIcon) {
                 const updateIcon = newTheme === "dark" ? "asset/ic-darkmode.svg" : "asset/ic-lightmode.svg";
