@@ -1,0 +1,109 @@
+{
+    "certifications": [
+        {
+            "title": "Dev Certification for Android (DCA)",
+            "issuer": "dev cert by dev.id",
+            "credentialUrl": "https://dev.id/certificate/verify/JE0PDN5075",
+            "issueDate": "JAN 2025",
+            "expirationDate": "JAN 2028"
+        },
+        {
+            "title": "Associate Cloud Engineer Certification (ACE)",
+            "issuer": "Google",
+            "credentialUrl": "https://www.credly.com/badges/b9769bc7-531c-4547-ae5d-a29db7271bc5/public_url",
+            "issueDate": "OCT 2024",
+            "expirationDate": "OCT 2027"
+        },
+        {
+            "title": "Menjadi Google Cloud Architect",
+            "issuer": "Dicoding Indonesia",
+            "credentialUrl": "https://www.dicoding.com/certificates/81P2NDGEJXOY",
+            "issueDate": "AUG 2024",
+            "expirationDate": "AUG 2027"
+        },
+        {
+            "title": "Google Cloud Computing Foundations Certificate",
+            "issuer": "Google Cloud",
+            "credentialUrl": "https://www.credly.com/badges/7949d062-6836-40c3-97ee-a94a9f65acc9",
+            "issueDate": "JUL 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Google Cybersecurity Professional Certificate V2",
+            "issuer": "Coursera",
+            "credentialUrl": "https://www.credly.com/badges/c105139b-6431-414c-9503-032be4961ba7",
+            "issueDate": "JUL 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Belajar Penerapan Machine Learning dengan Google Cloud",
+            "issuer": "Dicoding Indonesia",
+            "credentialUrl": "https://www.dicoding.com/certificates/JMZV3178JPN9",
+            "issueDate": "MAY 2024",
+            "expirationDate": "MAY 2027"
+        },
+        {
+            "title": "Menjadi Google Cloud Engineer",
+            "issuer": "Dicoding Indonesia",
+            "credentialUrl": "https://www.dicoding.com/certificates/53XEOJDOKZRN",
+            "issueDate": "MAY 2024",
+            "expirationDate": "MAY 2027"
+        },
+        {
+            "title": "Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
+            "issuer": "Dicoding Indonesia",
+            "credentialUrl": "https://www.dicoding.com/certificates/0LZ0630M0Z65",
+            "issueDate": "APR 2024",
+            "expirationDate": "APR 2027"
+        },
+        {
+            "title": "Application Development on Cloud Run",
+            "issuer": "Google Cloud",
+            "credentialUrl": "https://www.skills.google/public_profiles/3ce76b23-b90b-4eed-86ac-4d23a2ec304c/badges/9115329",
+            "issueDate": "MAY 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Logging and Monitoring in Google Cloud",
+            "issuer": "Google Cloud",
+            "credentialUrl": "https://www.skills.google/public_profiles/3ce76b23-b90b-4eed-86ac-4d23a2ec304c/badges/8382983",
+            "issueDate": "MAR 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Essential Google Cloud Infrastructure: Core Services",
+            "issuer": "Google Cloud",
+            "credentialUrl": "https://www.skills.google/public_profiles/3ce76b23-b90b-4eed-86ac-4d23a2ec304c/badges/8347530",
+            "issueDate": "MAR 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Google Cloud Computing Foundations: Networking & Security in Google Cloud",
+            "issuer": "Google Cloud",
+            "credentialUrl": "https://www.skills.google/public_profiles/3ce76b23-b90b-4eed-86ac-4d23a2ec304c/badges/8216526",
+            "issueDate": "MAR 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Google Cloud Computing Foundations: Infrastructure in Google Cloud",
+            "issuer": "Google Cloud",
+            "credentialUrl": "https://www.skills.google/public_profiles/3ce76b23-b90b-4eed-86ac-4d23a2ec304c/badges/8214787",
+            "issueDate": "MAR 2024",
+            "expirationDate": null
+        },
+        {
+            "title": "Belajar Dasar UX Design",
+            "issuer": "Dicoding Indonesia",
+            "credentialUrl": "https://www.dicoding.com/certificates/QLZ943VYMP5D",
+            "issueDate": "JAN 2024",
+            "expirationDate": "JAN 2027"
+        },
+        {
+            "title": "Belajar Pengembangan Aplikasi Android Intermediate",
+            "issuer": "Dicoding Indonesia",
+            "credentialUrl": "https://www.dicoding.com/certificates/4EXG4REK1PRL",
+            "issueDate": "NOV 2023",
+            "expirationDate": "NOV 2026"
+        }
+    ]
+}

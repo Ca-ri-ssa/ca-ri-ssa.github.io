@@ -1,0 +1,115 @@
+{
+    "mySkills": [
+        {
+            "name": "Javascript",
+            "icon": "asset/ic-javascript.svg",
+            "link": "https://en.wikipedia.org/wiki/JavaScript"
+        },
+        {
+            "name": "Node.js",
+            "icon": "asset/ic-nodejs.svg",
+            "link": "https://nodejs.org/en"
+        },
+        {
+            "name": "RESTful API",
+            "icon": "asset/ic-restapi.svg",
+            "link": "https://en.wikipedia.org/wiki/REST"
+        },
+        {
+            "name": "Google Cloud Platform",
+            "icon": "asset/ic-gcp.svg",
+            "link": "https://en.wikipedia.org/wiki/Google_Cloud_Platform"
+        },
+        {
+            "name": "Kotlin",
+            "icon": "asset/ic-kotlin.svg",
+            "link": "https://kotlinlang.org/"
+        },
+        {
+            "name": "Android",
+            "icon": "asset/ic-android.svg",
+            "link": "https://developer.android.com/"
+        },
+        {
+            "name": "MySQL",
+            "icon": "asset/ic-mysql.svg",
+            "link": "https://www.mysql.com/"
+        }
+    ],
+    "educations": [
+        {
+            "school": "Universitas Pelita Harapan",
+            "schoolImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhlRZvQFXFPfSVYv-j8jldQJQgsWGfkM28tQ&s",
+            "schoolLink": "https://www.uph.edu/id/",
+            "major": "Information Systems",
+            "degree": "Bachelor's Degree",
+            "grade": "3.83/4.00",
+            "description": "<li>Participant at Leadership Development Camp (LDC) 2022.</li><li>Member of Guardian Division of Sketch Your Path 2022.</li><li>Mentor of Information Systems student intake 2022.</li><li>Committee of Days of Togetherness and Sharing (DOTS) 2022 Information Systems Students' Association (HMPSSI) and Informatics Students' Association (HMPSIF).</li><li>Supporting Crew of Student Club Expo 2022 held by Student Executive Board (BEM).</li><li>Participated in Kampus Merdeka program (MSIB) at Bangkit Academy 2023 Batch 2 and Bangkit Academy 2024 Batch 1.</li>",
+            "startDate": "AUG 2021",
+            "endDate": "AUG 2025"
+        },
+        {
+            "school": "SMA Sutomo 1",
+            "schoolImg": "https://media.licdn.com/dms/image/v2/C510BAQGpn-YUm6N3lg/company-logo_200_200/company-logo_200_200/0/1631396909984/sma_sutomo_1_medan_logo?e=1779321600&v=beta&t=r8dgztopfyTUK28gu6pcPcfsG22uaV9aPlno9Hp9Zoo",
+            "schoolLink": "https://sutomo-mdn.sch.id/sutomo1-sma",
+            "major": "Mathematics and Natural Science",
+            "degree": "High School Diploma",
+            "grade": null,
+            "description": null,
+            "startDate": "JUL 2018",
+            "endDate": "MAY 2021"
+        }
+    ],
+    "experiences": [
+        {
+            "title": "Back End Developer Intern",
+            "place": "Remote",
+            "type": "Internship",
+            "company": "Braincore",
+            "companyImg": "https://media.licdn.com/dms/image/v2/D560BAQEUiAeooDnPEQ/company-logo_200_200/company-logo_200_200/0/1705408617402/braincore_id_logo?e=2147483647&v=beta&t=sftQXLqx2kBf-lbd9AV60_gmMS4AWOcxUnu99K7wYek",
+            "companyLink": "https://braincore.id/",
+            "startDate": "AUG 2024",
+            "endDate": "OCT 2024",
+            "skills": ["Bun", "Flask", "RESTful API"],
+            "description": "<li>Learned and applied Bun for Back-End Development.</li><li>Contributed to the Days Trips Optimization project by developing and maintaining backend services.</li><li>Managed a Flask-based server, including API endpoint implementation and request handling.</li><li>Collaborated with team members to integrate backend services with other applications.</li>"
+        }
+    ],
+    "activities": [
+        {
+            "title": "Cloud Computing Distinction Graduate &ndash; Bangkit 2024 Batch 1",
+            "type": "Studi Independen MSIB &ndash; Kampus Merdeka program",
+            "organization": "Bangkit led by Google, Goto, and Traveloka",
+            "organizationImg": "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=2147483647&v=beta&t=oWNWz9O6b8rrBzaHIYm0P8JDa0hYPcNOJcPJMa_jpcY",
+            "organizationLink": "https://www.linkedin.com/company/bangkit-academy/posts/?feedView=all",
+            "organizationDesc": "Bangkit is a unique career readiness program led by Google and delivered with support from industry experts from industry partners like GoTo and Traveloka. The program is designed to provide the participants with first-hand exposure to real-world practitioners and prepare them with relevant skills for a successful career in leading tech companies.",
+            "description": "<li>Selected as one of 4,650 students from 57k+ applicants all over Indonesia.</li><li>Accepted as one of the two selected teams in the Company Capstone Track (Braincore) from the total of 59 teams.</li><li>Best Team at Bangkit Company Track Capstone Project with Braincore.</li><li>Graduated as the top 10% of Best Graduates with Distinction in Cloud Computing Learning Path.</li><li>Top 50 Best Showcase team Winners of Bangkit Challenge 2: Project Management Challenge.</li><li>Learned Cloud Computing based on Google Cloud using Google Cloud Platform (GCP).</li>",
+            "skills": ["Backend", "Node.js (Javascript)", "MySQL", "RESTful API", "Google Cloud"],
+            "startDate": "FEB 2024",
+            "endDate": "JUL 2024"
+        },
+        {
+            "title": "Mobile Development (Android) Graduate &ndash; Bangkit 2023 Batch 2",
+            "type": "Studi Independen MSIB &ndash; Kampus Merdeka program",
+            "organization": "Bangkit led by Google, Goto, and Traveloka",
+            "organizationImg": "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=2147483647&v=beta&t=oWNWz9O6b8rrBzaHIYm0P8JDa0hYPcNOJcPJMa_jpcY",
+            "organizationLink": "https://www.linkedin.com/company/bangkit-academy/posts/?feedView=all",
+            "organizationDesc": "Bangkit is a unique career readiness program led by Google and delivered with support from industry experts from industry partners like GoTo and Traveloka. The program is designed to provide the participants with first-hand exposure to real-world practitioners and prepare them with relevant skills for a successful career in leading tech companies.",
+            "description": "<li>Selected as one of 4,520 students from 47k+ applicants all over Indonesia.</li><li>Graduated as Full Graduate in Mobile Development (Android) Learning Path.</li><li>Learned Mobile Development using Native Android and Jetpack Compose.</li>",
+            "skills": ["Android", "Kotlin", "Android Studio", "SQLite"],
+            "startDate": "AUG 2023",
+            "endDate": "JAN 2024"
+        },
+        {
+            "title": "Mentor of Information Systems Study Program",
+            "type": "Contract",
+            "organization": "Mentoring Universitas Pelita Harapan",
+            "organizationImg": "https://media.licdn.com/dms/image/v2/C510BAQERyWIsSDw_mw/company-logo_200_200/company-logo_200_200/0/1630597855572?e=1779321600&v=beta&t=pPyCbvahBWr3yebUXCxuXQrOM4KHtbMAZ64dydBA-YM",
+            "organizationLink": "https://www.linkedin.com/company/mentoring-universitas-pelita-harapan/posts/?feedView=all",
+            "organizationDesc": "Mentoring Universitas Pelita Harapan is a Student Service Unit (ULM &ndash; Unit Layanan Mahasiswa) that provides guidance, support, and mentorship to new students as they transition into their academic journey at Universitas Pelita Harapan.",
+            "description": "<li>Mentored a group of new students intake 2022 from Information Systems.</li><li>Guided and informed mentees regarding important matters in university, such as announcements, rules, and regulations.</li><li>Encouraged mentees to be proactive in exploring events, competitions, and programs offered by the university.</li>",
+            "skills": ["Servant Leadership"],
+            "startDate": "AUG 2022",
+            "endDate": "AUG 2023"
+        }
+    ]
+}

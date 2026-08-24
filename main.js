@@ -56,7 +56,7 @@ if (downloadBtn) {
 
 const skill_set = async () => {
     try {
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/portfolio-data.json");
         const data = await response.json();
         const skill = data.mySkills;
 
@@ -77,7 +77,7 @@ const skill_set = async () => {
 
 const work_experience = async () => {
     try{
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/portfolio-data.json");
         const data = await response.json();
 
         const container = document.getElementById("experience-container");
@@ -131,7 +131,7 @@ const work_experience = async () => {
 
 const all_activity = async () => {
     try {
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/portfolio-data.json");
         const data = await response.json();
 
         const container = document.getElementById("activity-container");
@@ -178,7 +178,7 @@ const all_activity = async () => {
 
 const all_project = async () => {
     try {
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/project-data.json");
         const data = await response.json();
         const allProjectData = data.projects;
 
@@ -222,7 +222,7 @@ const project_details = async () => {
     const projectTitle = param.get("title");
 
     try {
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/project-data.json");
         const data = await response.json();
 
         const project = data.projects.find(p => p.path === projectTitle);
@@ -312,7 +312,7 @@ const project_details = async () => {
 
 const all_education = async () => {
     try {
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/portfolio-data.json");
         const data = await response.json();
         
         const container = document.getElementById("education-container");
@@ -359,27 +359,17 @@ const all_education = async () => {
 
 const all_certificate = async () => {
     try {
-        const response = await fetch("./portfolio-data.json");
+        const response = await fetch("./data/certificate-data.json");
         const data = await response.json();
-        const currentYear = new Date().getFullYear();
-    
-        const validCert = data.certifications.filter(cert => {
-            if (!cert.expirationDate) return true;
-            const match = cert.expirationDate.match(/\d{4}/);
-            if(match) {
-                const year = parseInt(match[0]);
-                return year >= currentYear;
-            }
-            return true;
-        });
+        const certificateData = data.certifications;
 
-        const totalCert = validCert.length;
+        const totalCert = certificateData.length;
         document.getElementById("total-cert").innerHTML = `${totalCert}`;
 
         let showAllCert = false;
 
         const displayCert = () => {
-            const certToShow = showAllCert ? validCert : validCert.slice(0, 6);
+            const certToShow = showAllCert ? certificateData : certificateData.slice(0, 6);
 
             const container = document.getElementById("certificate-container");
             container.innerHTML = certToShow.map(cert => `

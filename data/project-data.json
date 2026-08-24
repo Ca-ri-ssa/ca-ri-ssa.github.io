@@ -1,0 +1,80 @@
+{
+    "projects": [
+        {
+            "title": "Learnin P3K",
+            "path": "learnin-p3k",
+            "projectLogo": "asset/logo_project/logo-learninp3k.png",
+            "projectImg": ["learninp3k/projectimg-learninp3k-1.png", "learninp3k/projectimg-learninp3k-2.png", "learninp3k/projectimg-learninp3k-3.png", "learninp3k/projectimg-learninp3k-4.png", "learninp3k/projectimg-learninp3k-5.png", "learninp3k/projectimg-learninp3k-6.png", "learninp3k/projectimg-learninp3k-7.png", "learninp3k/projectimg-learninp3k-8.png", "learninp3k/projectimg-learninp3k-9.png", "learninp3k/projectimg-learninp3k-10.png", "learninp3k/projectimg-learninp3k-11.png"],
+            "projectDemo": "LT-AaMg3knc",
+            "techStacks": ["Android (Kotlin)", "Node.js (Javascript)", "MySQL", "GCP"],
+            "myRole": "Full Stack Developer (Mobile and Backend)",
+            "projectLink": [
+                {
+                    "name": "TA-LearninP3K-AndroidApp",
+                    "url": "https://github.com/Ca-ri-ssa/TA-LearninP3K-AndroidApp"
+                },
+                {
+                    "name": "TA-LearninP3K-Backend",
+                    "url": "https://github.com/Ca-ri-ssa/TA-LearninP3K-BackEnd"
+                }
+            ],
+            "description": "Learnin P3K is an Android mobile application designed to provide first aid (P3K) learning materials. This application allows users to learn and understand P3K and raise awareness of first aid safety. The materials are integrated to be structured educational content, filled with gamification and quizzes to boost users’ motivation in learning at Learnin P3K.<br><br>In this project, my role is Full Stack Developer, responsible for building a mobile application that serves as the frontend for user interaction and developing the backend to manage application and user data. The mobile application was built natively for the Android OS using the MVVM (Model - View - ViewModel) architecture. The backend was developed using Node.js with Express.js framework, leveraging Sequelize as the ORM with a MySQL database. To enable remote data access for users, I deployed the backend services to Google Cloud and utilized Google Cloud SQL for managing the database.<br><br>Learnin P3K was developed as a final project required to obtain a Bachelor’s degree at Universitas Pelita Harapan. The application was tested with User Acceptance Testing (UAT), showing that the application successfully met the user’s needs. Pre-test and post-test conducted with users demonstrated a significant <span class=\"highlight-word\">71.81% improvement</span> in first aid understanding. Additionally, users’ feedback was dominated by the gamification aspect, indicating that the application is effective in increasing learning motivation.",
+            "startDate": "APR 2025",
+            "endDate": "JAN 2025"
+        },
+        {
+            "title": "BrainStore",
+            "path": "brainstore",
+            "projectLogo": "asset/logo_project/logo-brainstore.png",
+            "projectImg": null,
+            "projectDemo": "4WufB9SrW6U",
+            "techStacks": ["Node.js (Javascript)", "MySQL", "Sequelize", "GCP"],
+            "myRole": "Backend Developer",
+            "projectLink": [
+                {
+                    "name": "BrainStore-Backend-API",
+                    "url": "https://github.com/Ca-ri-ssa/BrainStore-BackEnd-API"
+                }
+            ],
+            "description": "BrainStore is an e-commerce multi-platform application available on Android and the Web, developed to address customer frustrations with low-quality product imagery. BrainStore is designed with three user roles: Admin, Seller, and Customer. The core of the application features a Machine Learning to detects and flags image quality issues like blur or bokeh, ensuring a high-standard visual experience for users. This empowers sellers to improve their product presentation and effectively boost sales. Recognizing the potential of the Machine Learning errors, BrainStore allows administrators to review detections and provide corrective feedback through a monitoring dashboard for the Machine Learning model. The error detections appear as appeals from sellers when their products are labeled as blur or bokeh, preventing them from being published to the application.<br><br>BrainStore was executed by a cross-functional team of 6 members, specializing in Machine Learning, Cloud Computing, and Mobile Development. My role focused on Cloud Computing, where I was responsible for backend development. The backend was developed using Node.js with Express.js framework, leveraging Sequelize as the ORM with a MySQL database. To enable remote data access for users, I deployed the backend services to Google Cloud, utilizing Google Cloud SQL for managing the database and Google Cloud Storage for file and image hosting.<br><br>BrainStore was developed as a compay-based capstone project in collaboration with Braincore during Bangkit Academy 2024 Batch 1. This project was honored with the <span class=\"highlight-word\">Best Team award</span> for excellence in collaboration and successful project delivery.",
+            "startDate": "MAY 2024",
+            "endDate": "JUN 2024"
+        },
+        {
+            "title": "Pusatara",
+            "path": "pusatara",
+            "projectLogo": "asset/logo_project/logo-pusatara.png",
+            "projectImg": ["pusatara/projectimg-pusatara-1.png", "pusatara/projectimg-pusatara-2.png", "pusatara/projectimg-pusatara-3.png", "pusatara/projectimg-pusatara-4.png"],
+            "projectDemo": null,
+            "techStacks": ["Android (Kotlin)", "NoSQL", "Android Studio"],
+            "myRole": "Mobile (Android) Developer",
+            "projectLink": [
+                {
+                    "name": "Pusatara-Android-App",
+                    "url": "https://github.com/Ca-ri-ssa/Pusatara-Android-App"
+                }
+            ],
+            "description": "Pusatara is an Android mobile application designed to introduce traditional Indonesian fabrics into the digital era. This helps to address the significant issue of the awareness gap for Batik and Songket, making our rich cultural heritage accessible and engaging for the next generation. The core of the application features a Machine Learning to identify specific fabrics and provide users with detailed information about them, aiming to preserve and promote Indonesia’s rich textile heritage.<br><br>Pusatara was executed by a cross-functional team of 7 members, specializing in Machine Learning, Cloud Computing, and Mobile Development. My role focused on Mobile Development, where I was responsible for designing the application interface and building the mobile application. The mobile application was built natively for the Android OS using the MVVM (Model - View - ViewModel) architecture.<br><br>Pusatara was developed as a product-based capstone project in Bangkit Academy 2023 Batch 2.",
+            "startDate": "DEC 2023",
+            "endDate": "DEC 2023"
+        },
+        {
+            "title": "O-KI (Only K-POP Info)",
+            "path": "o-ki",
+            "projectLogo": "asset/logo_project/logo-o-ki.png",
+            "projectImg": ["o-ki/projectimg-oki-1.png", "o-ki/projectimg-oki-2.png", "o-ki/projectimg-oki-3.png", "o-ki/projectimg-oki-4.png", "o-ki/projectimg-oki-5.png", "o-ki/projectimg-oki-6.png", "o-ki/projectimg-oki-7.png", "o-ki/projectimg-oki-8.png"],
+            "projectDemo": null,
+            "techStacks": ["PHP", "Javascript", "MySQL"],
+            "myRole": "Full Stack Developer",
+            "projectLink": [
+                {
+                    "name": "Final-UAS-O-KI",
+                    "url": "https://github.com/Ca-ri-ssa/tugas-php/tree/master/Final%20UAS%20O_KI"
+                }
+            ],
+            "description": "O-KI (Only K-pop Info) is a web-based application created to provide K-pop fans with easy access to a variety information about their favorite artists, songs, concerts, and trends across the Korean industry entertainment. O-KI also includes a shop section for K-pop fans to browse and buy K-pop merchandises and official collectibles. O-KI is designed with two user roles: admin and customer.<br><br>This project was collaborated with 4 team members. My role focused on the Full Stack Development, responsible for both the frontend and backend. For the frontend, I utilized HTML5 with the Bootstrap framework for a responsive layout, along with CSS3 and JavaScript for interactivity. On the backend, I implemented PHP to handle server-side logic and data management, using phpMyAdmin to interact with the MySQL database.<br><br>O-KI was developed as a final project in the “Perancangan & Pengembangan Web I” class at Universitas Pelita Harapan.",
+            "startDate": "APR 2023",
+            "endDate": "MAY 2023"
+        }
+    ]
+}
