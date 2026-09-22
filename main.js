@@ -192,11 +192,15 @@ const all_project = async () => {
 
             const container = document.getElementById("project-container");
             container.innerHTML = projectsToShow.map(project => `
-                <a href="project-detail.html?title=${encodeURIComponent(project.path)}" class="card flex flex-col p-5 rounded-[20px] border-[2px]" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
+                <div onclick="window.location.href='project-detail.html?title=${encodeURIComponent(project.path)}'" class="card flex flex-col p-5 rounded-[20px] border-[2px] cursor-pointer" style="background-color: var(--container-bg-color); border-color: var(--color-primary);"">
                     <img src="${project.projectLogo}" alt="${project.title}" class="h-[120px] rounded-[12px] object-cover object-center">
-                    <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px"><b>${project.title}</b></h2>
-                    <p class="line-clamp-5 mt-[8px]">${project.description}</p>
-                </a>
+                    <h2 class="mt-[16px] hover:underline hover:underline-offset-4" style="font-size: 20px">
+                        <b>${project.title}</b>
+                    </h2>
+                    <div class="project-desc-wrap mt-[8px]">
+                        ${project.description}
+                    </div>
+                </div>
             `).join('');
         };
 

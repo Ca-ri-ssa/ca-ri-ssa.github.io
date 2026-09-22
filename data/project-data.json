@@ -1,6 +1,24 @@
 {
     "projects": [
         {
+            "title": "Shopping Cart",
+            "path": "shopping-cart",
+            "projectLogo": "asset/logo_project/logo-shoppingcart-top.png",
+            "projectImg": ["shoppingcarttop/screenrec-home-page.gif", "shoppingcarttop/screenrec-product-detail-page.gif", "shoppingcarttop/screenrec-cart-page-1.gif", "shoppingcarttop/screenrec-cart-page-2.gif"],
+            "projectDemo": null,
+            "techStacks": ["Javascript", "React", "Vite"],
+            "myRole": "Frontend Developer",
+            "projectLink": [
+                {
+                    "name": "shopping-cart-top",
+                    "url": "https://github.com/Ca-ri-ssa/shopping-cart-top"
+                }
+            ],
+            "description": "Shopping Cart is an e-commerce website featuring cart management, developed as a part of my self-learning at <span class=\"highlight-word\">The Odin Project for Project: Shopping Cart assignment</span>.<br><br>In this project, my role is Frontend Developer, responsible for designing the website interface, creating the UI components, and integrating the API. This website was built using React.js and Vite.js, with Node.js as the development environment. To manage user interactions and data flow, I utilized React’s Context API for global product and cart state management, leveraging useState and useEffect hooks for reactivity and asynchronous API data fetching.<br><br>Visit the website at:<br><a href=\"https://carissac-shoppingcart.netlify.app\" class=\"underline underline-offset-4\">https://carissac-shoppingcart.netlify.app/</a><br><br>Result explanation:<ol><li>Shopping Cart allows users to search product and filter it by its category in Home page.</li><li>The detail of the product can be viewed by clicking on any product card. From the Product Detail page, users can also add products directly to cart. To change a product's quantity, users must update it on its Product Detail page.</li><li>On the Cart page, users can view a summary of all cart items (total item count & subtotal). User can also remove cart items directly from this page.</li><li>Users can also instantly remove product from their cart on the Product Detail page.</li></ol>",
+            "startDate": "AUG 2026",
+            "endDate": "SEP 2026"
+        },
+        {
             "title": "Learnin P3K",
             "path": "learnin-p3k",
             "projectLogo": "asset/logo_project/logo-learninp3k.png",

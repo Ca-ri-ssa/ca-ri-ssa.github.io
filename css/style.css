@@ -231,6 +231,17 @@ header nav ul li:hover {
     margin-left: 0;
 }
 
+.json-list ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.json-list ol li p {
+    margin-left: 0px;
+}
+
 .card:hover {
     box-shadow: inset 1px 1px 6px rgb(from var(--color-primary) r g b / 40%);
     transform: translateY(1px);
@@ -294,6 +305,15 @@ header nav ul li:hover {
     border-radius: 8px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.project-desc-wrap {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+    word-break: break-word;
 }
 
 footer {
