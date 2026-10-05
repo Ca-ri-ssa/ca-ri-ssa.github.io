@@ -44,7 +44,7 @@ const change_theme = () => {
 
 const download_resume = () => {
     const linkDownload = document.createElement('a');
-    linkDownload.href = "/asset/resume/carissachandra-resume-23062026.pdf"
+    linkDownload.href = "/asset/resume/carissachandra-resume-05102026.pdf"
     linkDownload.download = "CarissaChandra-Resume.pdf";
     linkDownload.click();
 };
@@ -413,7 +413,7 @@ const contact_form = () => {
         e.preventDefault();
 
         const name = formData.get('name');
-        const subject = `Carissa Chandra's Portfolio - ${name} send you a new message via Web3Forms`;
+        const subject = `Car's Portfolio - ${name} send you a new message via Web3Forms`;
         formData.append('subject', subject);
 
         const object = Object.fromEntries(formData);
